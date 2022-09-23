@@ -27,10 +27,9 @@ var _duration = 3000;
 bool loading = false;
 String retrykml = "";
 String retryname = "";
-Future retryButton(String KML, String name, dynamic duration) async {
+Future retryButton(String KML, String name, var duration) async {
   retrykml = await KML;
   retryname = await name;
-  _duration = await duration;
 }
 
 class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
@@ -38,8 +37,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
   late AnimationController _rotationiconcontroller;
 
   bool isOrbiting = false;
-  double latvalue = 28.55665656297236;
-  double longvalue = -17.885454520583153;
+  double latvalue = 39.29793673357732;
+  double longvalue = -3.144586280853279;
 
   // ignore: unused_element
   _launchURL(String url) async {
@@ -1147,61 +1146,35 @@ class LGConnection {
     );
 
     LookAt flyto = LookAt(
-      projectname == "Historic_Track"
-          ? -17.885454
-          : projectname == "Located_Events"
-              ? -17.834886
-              : projectname == "SO2_Emission"
-                  ? -7.561565
-                  : projectname == "Prehistoric_Track"
-                      ? -17.885454
-                      : projectname == "Lava_Flow"
-                          ? -17.892286
-                          : -17.895486,
-      projectname == "Historic_Track"
-          ? 28.556656
-          : projectname == "Located_Events"
-              ? 28.564986
-              : projectname == "SO2_Emission"
-                  ? 33.561245
-                  : projectname == "Prehistoric_Track"
-                      ? 28.556656
-                      : projectname == "Lava_Flow"
-                          ? 28.616354
-                          : projectname == "Affected_Areas"
-                              ? 28.616354
-                              : projectname == "Situation"
-                                  ? 28.597354
-                                  : projectname == "Landscape"
-                                      ? 28.616354
-                                      : 28.610478,
-      projectname == "Located_Events"
-          ? '${61708.9978371 / int.parse(credencials['numberofrigs'])}'
-          : projectname == "Lava_Flow"
-              ? '${18208.9978371 / int.parse(credencials['numberofrigs'])}'
-              : projectname == "Landscape"
-                  ? '${65208.997837 / int.parse(credencials['numberofrigs'])}'
-                  : projectname == "Affected_Areas"
-                      ? '${18208.9978371 / int.parse(credencials['numberofrigs'])}'
-                      : projectname == "Situation"
-                          ? '${75208.9978371 / int.parse(credencials['numberofrigs'])}'
-                          : projectname == "Historic_Track"
-                              ? '${151708.997837 / int.parse(credencials['numberofrigs'])}'
-                              : projectname == "SO2_Emission"
-                                  ? '${10500001.9978 / int.parse(credencials['numberofrigs'])}'
-                                  : projectname == "Prehistoric_Track"
-                                      ? '${151708.997837 / int.parse(credencials['numberofrigs'])}'
-                                      : '${91708.9978371 / int.parse(credencials['numberofrigs'])}',
-      projectname == "Historic_Track"
+      projectname == "Crop_Field"
+          ? -3.144586280853279
+          : projectname == "Fields"
+              ? -3.144586280853279
+              : projectname == "Insect"
+                  ? -3.144586280853279
+                  : -3.144586280853279,
+      projectname == "Crop_Field"
+          ? 39.29793673357732
+          : projectname == "Fields"
+              ? 39.29793673357732
+              : projectname == "Insect"
+                  ? 39.29793673357732
+                  : 39.29793673357732,
+      projectname == "Insect"
+          ? '${1208.9978371 / int.parse(credencials['numberofrigs'])}'
+          : projectname == "Crop_Field"
+              ? '${1708.997837 / int.parse(credencials['numberofrigs'])}'
+              : projectname == "Fields"
+                  ? '${1708.997837 / int.parse(credencials['numberofrigs'])}'
+                  : '${1708.9978371 / int.parse(credencials['numberofrigs'])}',
+      projectname == "Crop_Field"
           ? '41.82725143432617'
-          : projectname == "SO2_Emission"
-              ? '25'
-              : projectname == "Prehistoric_Track"
-                  ? '41.82725143432617'
-                  : '45',
-      projectname == "Historic_Track"
+          : projectname == "Fields"
+              ? '41.82725143432617'
+              : '45',
+      projectname == "Crop_Field"
           ? ' 61.403038024902344'
-          : projectname == "Prehistoric_Track"
+          : projectname == "Fields"
               ? ' 61.403038024902344'
               : '0',
     );

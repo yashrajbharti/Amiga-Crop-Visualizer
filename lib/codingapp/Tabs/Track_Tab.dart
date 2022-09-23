@@ -236,7 +236,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                   translate('title.name'),
                                   "historic_infographic.png");
                               setState(() {
-                                _duration = 2290;
+                                _duration = 5290;
                               });
                               jumpToPage(0);
                               _showToast(translate('Track.ready'),
@@ -291,7 +291,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                   translate('title.name'),
                                   "lavaflow_infographic.jpg");
                               setState(() {
-                                _duration = 4000;
+                                _duration = 3000;
                               });
                               jumpToPage(1);
                               _showToast(translate('Track.ready'),
@@ -568,8 +568,8 @@ http://maps.google.com/mapfiles/kml/paddle/purple-blank.png
   </tr>
 </table>]]></description>
 		<LookAt>
-			<longitude>-17.841486</longitude>
-			<latitude>28.638478</latitude>
+			<longitude>-3.144586280853279</longitude>
+			<latitude>39.29793673357732</latitude>
 			<altitude>0</altitude>
 			<heading>0</heading>
 			<tilt>0</tilt>
@@ -578,7 +578,7 @@ http://maps.google.com/mapfiles/kml/paddle/purple-blank.png
 		<styleUrl>#purple_paddle</styleUrl>
 		<gx:balloonVisibility>1</gx:balloonVisibility>
 		<Point>
-			<coordinates>-17.841486,28.638478,0</coordinates>
+			<coordinates>-3.144586280853279,39.29793673357732,0</coordinates>
 		</Point>
 	</Placemark>
 </Document>
@@ -674,26 +674,26 @@ http://maps.google.com/mapfiles/kml/paddle/purple-blank.png
 
     LookAt flyto = LookAt(
       projectname == "Crop_Field"
-          ? -17.885454
+          ? -3.144586280853279
           : projectname == "Fields"
-              ? -17.885454
+              ? -3.144586280853279
               : projectname == "Insect"
-                  ? -17.892286
-                  : -17.895486,
+                  ? -3.144586280853279
+                  : -3.144586280853279,
       projectname == "Crop_Field"
-          ? 28.556656
+          ? 39.29793673357732
           : projectname == "Fields"
-              ? 28.556656
+              ? 39.29793673357732
               : projectname == "Insect"
-                  ? 28.616354
-                  : 28.610478,
+                  ? 39.29793673357732
+                  : 39.29793673357732,
       projectname == "Insect"
-          ? '${18208.9978371 / int.parse(credencials['numberofrigs'])}'
+          ? '${1208.9978371 / int.parse(credencials['numberofrigs'])}'
           : projectname == "Crop_Field"
-              ? '${151708.997837 / int.parse(credencials['numberofrigs'])}'
+              ? '${1708.997837 / int.parse(credencials['numberofrigs'])}'
               : projectname == "Fields"
-                  ? '${151708.997837 / int.parse(credencials['numberofrigs'])}'
-                  : '${91708.9978371 / int.parse(credencials['numberofrigs'])}',
+                  ? '${1708.997837 / int.parse(credencials['numberofrigs'])}'
+                  : '${1708.9978371 / int.parse(credencials['numberofrigs'])}',
       projectname == "Crop_Field"
           ? '41.82725143432617'
           : projectname == "Fields"

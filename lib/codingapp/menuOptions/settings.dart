@@ -457,7 +457,7 @@ class LGConnection {
 		<ScreenOverlay id="abc">
 			<name>AmigaCrop</name>
 			<Icon>
-				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/alllogos.jpg</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/allamiga.png</href>
 			</Icon>
 			<overlayXY x="0" y="1" xunits="fraction" yunits="fraction"/>
 			<screenXY x="0" y="0.98" xunits="fraction" yunits="fraction"/>
