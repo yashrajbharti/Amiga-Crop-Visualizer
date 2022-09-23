@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 
 import 'package:voltrac/codingapp/drawer.dart';
@@ -39,7 +38,7 @@ class _MainpageState extends State<Mainpage> {
                         child: Text(
                           translate('title.name'),
                           style: TextStyle(
-                            fontSize: 48,
+                            fontSize: 43,
                             color: themeNotifier.isDark
                                 ? Color.fromARGB(255, 204, 204, 204)
                                 : Color.fromARGB(255, 16, 16, 16),
@@ -91,24 +90,9 @@ class _MainpageState extends State<Mainpage> {
                   ),
                 )),
       ),
-      endDrawer: FeatureDiscovery(child: Drawers()),
+      endDrawer: Drawers(),
       body: Layout(),
     );
-  }
-
-  @override
-  void initState() {
-    // ...
-    SchedulerBinding.instance?.addPostFrameCallback((Duration duration) {
-      FeatureDiscovery.discoverFeatures(
-        context,
-        const <String>{
-          // Feature ids for every feature that you want to showcase in order.
-          'feature12',
-        },
-      );
-    });
-    super.initState();
   }
 }
 

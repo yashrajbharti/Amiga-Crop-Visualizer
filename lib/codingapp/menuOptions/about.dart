@@ -73,7 +73,7 @@ class _AboutScreenState extends State<AboutScreen> {
                       ),
                       Builder(
                           builder: (context) => IconButton(
-                              icon: Image.asset('assets/volcano.png'),
+                              icon: Image.asset('assets/leaf.png'),
                               iconSize: 410,
                               onPressed: null)),
                       Linkify(

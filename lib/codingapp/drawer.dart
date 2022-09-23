@@ -3,7 +3,7 @@ import 'package:flutter_translate/flutter_translate.dart';
 import 'package:voltrac/codingapp/mainpage.dart';
 import 'package:voltrac/codingapp/menuOptions/help.dart';
 import 'package:voltrac/codingapp/menuOptions/lg_tasks.dart';
-import 'package:voltrac/codingapp/menuOptions/custom_builder.dart';
+
 import 'package:voltrac/codingapp/menuOptions/settings.dart';
 import 'package:voltrac/codingapp/menuOptions/about.dart';
 import 'package:voltrac/codingapp/day_night_switch.dart';
@@ -188,53 +188,6 @@ class _DrawersState extends State<Drawers> {
                           ListTile(
                               title: DescribedFeatureOverlay(
                                   featureId:
-                                      'feature5', // Unique id that identifies this overlay.
-                                  tapTarget: Icon(
-                                    Icons.calendar_month_rounded,
-                                    size: 60,
-                                  ), // The widget that will be displayed as the tap target.
-                                  title: Text(
-                                    translate("drawer.custom"),
-                                    style: TextStyle(
-                                        color: themeNotifier.isDark
-                                            ? Colors.white
-                                            : Colors.black,
-                                        fontSize: 30),
-                                  ),
-                                  description: Text(translate("tour.custom"),
-                                      style: TextStyle(
-                                          color: themeNotifier.isDark
-                                              ? Colors.white
-                                              : Colors.black,
-                                          fontSize: 18)),
-                                  backgroundColor:
-                                      Color.fromARGB(255, 125, 164, 243),
-                                  targetColor: themeNotifier.isDark
-                                      ? Color.fromARGB(255, 30, 30, 30)
-                                      : Colors.white,
-                                  textColor: themeNotifier.isDark
-                                      ? Colors.white
-                                      : Colors.black,
-                                  child: Text(
-                                    translate("drawer.custom"),
-                                    style: TextStyle(
-                                        color: themeNotifier.isDark
-                                            ? Colors.white
-                                            : Colors.black,
-                                        fontSize: 40),
-                                  )),
-                              onTap: () {
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        CustomBuilder(),
-                                  ),
-                                );
-                              }),
-                          SizedBox(height: 24),
-                          ListTile(
-                              title: DescribedFeatureOverlay(
-                                  featureId:
                                       'feature6', // Unique id that identifies this overlay.
                                   tapTarget: Icon(
                                     Icons.construction_rounded,
@@ -353,49 +306,6 @@ class _DrawersState extends State<Drawers> {
                           ),
                         ]),
                   )))),
-      Consumer<ThemeModel>(
-          builder: (context, ThemeModel themeNotifier, child) => Positioned(
-              bottom: 30,
-              right: 30,
-              child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    elevation: 2,
-                    shadowColor: themeNotifier.isDark
-                        ? Colors.black
-                        : Colors.grey.withOpacity(0.5),
-                    primary: Color.fromARGB(255, 125, 164, 243),
-                    padding: EdgeInsets.all(15),
-                    shape: StadiumBorder(),
-                  ),
-                  onPressed: () {
-                    FeatureDiscovery.clearPreferences(
-                      context,
-                      const <String>{
-                        'feature3',
-                        'feature4',
-                        'feature5',
-                        'feature6',
-                        'feature7'
-                      },
-                    ).then((value) => FeatureDiscovery.discoverFeatures(
-                          context,
-                          const <String>{
-                            'feature3',
-                            'feature4',
-                            'feature5',
-                            'feature6',
-                            'feature7'
-                          },
-                        ));
-                  },
-                  child: DefaultTextStyle(
-                      style: TextStyle(
-                          fontSize: 30,
-                          color: themeNotifier.isDark
-                              ? Colors.white
-                              : Colors.black,
-                          fontFamily: "GoogleSans"),
-                      child: Text(translate("tour.take")))))),
     ]);
   }
 }

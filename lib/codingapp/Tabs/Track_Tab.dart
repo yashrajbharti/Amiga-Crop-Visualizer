@@ -13,7 +13,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:provider/provider.dart';
 import 'package:voltrac/codingapp/kml/LookAt.dart';
 import 'package:voltrac/codingapp/kml/orbit.dart';
-import 'package:voltrac/codingapp/menuOptions/custom_builder.dart';
 import 'package:voltrac/codingapp/theme-storage.dart';
 import 'package:voltrac/codingapp/kml/kml.dart';
 import 'package:voltrac/codingapp/menuOptions/lg_tasks.dart';
@@ -33,14 +32,9 @@ bool loading = false;
 double latvalue = 28.65665656297236;
 double longvalue = -17.885454520583153;
 List<String> projectname = [
-  "Historic_Track",
-  "Lava_Flow",
-  "Prehistoric_Track",
-  "Affected_Areas",
-  "Landscape",
-  "SO2_Emission",
-  "Situation",
-  "Located_Events"
+  "Crop_Field",
+  "Insect",
+  "Fields",
 ];
 var _duration = 3000;
 // List<String> localimages = [
@@ -152,404 +146,6 @@ class _SendtoLGState extends State<SendtoLG> {
     );
   }
 
-  _One(bool isDark) async {
-    _showToast(
-        translate("Track.loading") + "(" + translate('Track.hist').trim() + ")",
-        isDark);
-    await _read(0);
-    await LGConnection().openBalloon(
-        projectname[0],
-        translate('Track.hist').trim(),
-        translate("info.hist.date"),
-        240,
-        translate("info.description") +
-            " " +
-            translate("info.hist.description"),
-        "COPERNICUS, ResearchGate, Global Volcanism Program",
-        translate('title.name'),
-        "historic_infographic.png");
-    _showToast(
-        translate("Track.sending") + "(" + translate('Track.hist').trim() + ")",
-        isDark);
-    LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
-      if (stopdemo == false) {
-        _showToast(
-            translate('Track.Visualize') +
-                "(" +
-                translate('Track.hist').trim() +
-                ")",
-            isDark);
-        await LGConnection().cleanOrbit();
-        await Future.delayed(Duration(seconds: 6)).then((value) {
-          _showToast(
-              translate('map.buildorbit') +
-                  "(" +
-                  translate('Track.hist').trim() +
-                  ")",
-              isDark);
-          playOrbit();
-        });
-
-        await Future.delayed(Duration(seconds: 50)).then((value) {
-          _Two(isDark);
-        });
-      } else {
-        LGConnection().cleanVisualization();
-      }
-    }).catchError((onError) {
-      print('oh no $onError');
-      setState(() {
-        loading = false;
-      });
-      if (onError == 'nogeodata') {
-        showAlertDialog(
-            translate('Track.alert'), translate('Track.alert2'), isDark);
-      }
-      showAlertDialog(
-          translate('Track.alert3'), translate('Track.alert4'), isDark);
-    });
-    ;
-  }
-
-  _Two(bool isDark) async {
-    _showToast(
-        translate("Track.loading") + "(" + translate('Track.lava').trim() + ")",
-        isDark);
-    await _read(1);
-    await LGConnection().openBalloon(
-        projectname[1],
-        translate('Track.lava').trim(),
-        translate("info.lava.date"),
-        240,
-        translate("info.description") +
-            " " +
-            translate("info.lava.description"),
-        "COPERNICUS, Wikipedia | Cumbre Vieja",
-        translate('title.name'),
-        "lavaflow_infographic.jpg");
-    _showToast(
-        translate("Track.sending") + "(" + translate('Track.lava').trim() + ")",
-        isDark);
-    LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
-      if (stopdemo == false) {
-        _showToast(
-            translate('Track.Visualize') +
-                "(" +
-                translate('Track.lava').trim() +
-                ")",
-            isDark);
-        await LGConnection().cleanOrbit();
-        await Future.delayed(Duration(seconds: 6)).then((value) {
-          _showToast(
-              translate('map.buildorbit') +
-                  "(" +
-                  translate('Track.lava').trim() +
-                  ")",
-              isDark);
-          playOrbit();
-        });
-
-        await Future.delayed(Duration(seconds: 50)).then((value) {
-          _Three(isDark);
-        });
-      } else {
-        LGConnection().cleanVisualization();
-      }
-    });
-  }
-
-  _Three(bool isDark) async {
-    _showToast(
-        translate("Track.loading") +
-            "(" +
-            translate('Track.prehistoric').trim() +
-            ")",
-        isDark);
-    await _read(2);
-    await LGConnection().openBalloon(
-        projectname[2],
-        translate('Track.prehistoric').trim(),
-        translate("info.prehistoric.date"),
-        270,
-        translate("info.description") +
-            " " +
-            translate("info.prehistoric.description"),
-        "ResearchGate, Global Volcanism Program",
-        translate('title.name'),
-        "prehistoric_infographic.png");
-    _showToast(
-        translate("Track.sending") +
-            "(" +
-            translate('Track.prehistoric').trim() +
-            ")",
-        isDark);
-    LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
-      if (stopdemo == false) {
-        _showToast(
-            translate('Track.Visualize') +
-                "(" +
-                translate('Track.prehistoric').trim() +
-                ")",
-            isDark);
-        await LGConnection().cleanOrbit();
-        await Future.delayed(Duration(seconds: 6)).then((value) {
-          _showToast(
-              translate('map.buildorbit') +
-                  "(" +
-                  translate('Track.prehistoric').trim() +
-                  ")",
-              isDark);
-          playOrbit();
-        });
-
-        await Future.delayed(Duration(seconds: 50)).then((value) {
-          _Four(isDark);
-        });
-      } else {
-        LGConnection().cleanVisualization();
-      }
-    });
-  }
-
-  _Four(bool isDark) async {
-    _showToast(
-        translate("Track.loading") + "(" + translate('Track.aff').trim() + ")",
-        isDark);
-    await _read(3);
-    await LGConnection().openBalloon(
-        projectname[3],
-        translate('Track.aff').trim(),
-        translate("info.aff.date"),
-        240,
-        translate("info.description") + " " + translate("info.aff.description"),
-        "COPERNICUS",
-        translate('title.name'),
-        "affectedareas_infographic.jpg");
-    _showToast(
-        translate("Track.sending") + "(" + translate('Track.aff').trim() + ")",
-        isDark);
-    LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
-      if (stopdemo == false) {
-        _showToast(
-            translate('Track.Visualize') +
-                "(" +
-                translate('Track.aff').trim() +
-                ")",
-            isDark);
-        await LGConnection().cleanOrbit();
-        await Future.delayed(Duration(seconds: 6)).then((value) {
-          _showToast(
-              translate('map.buildorbit') +
-                  "(" +
-                  translate('Track.aff').trim() +
-                  ")",
-              isDark);
-          playOrbit();
-        });
-
-        await Future.delayed(Duration(seconds: 50)).then((value) {
-          _Five(isDark);
-        });
-      } else {
-        LGConnection().cleanVisualization();
-      }
-    });
-  }
-
-  _Five(bool isDark) async {
-    _showToast(
-        translate("Track.loading") + "(" + translate('Track.land').trim() + ")",
-        isDark);
-    await _read(4);
-    await LGConnection().openBalloon(
-        projectname[4],
-        translate('Track.land').trim(),
-        translate("info.land.date"),
-        240,
-        translate("info.description") +
-            " " +
-            translate("info.land.description"),
-        "NASA Earth Observatory , Sentinel Playground, COPERNICUS",
-        translate('title.name'),
-        "landscape_infographic.jpg");
-    _showToast(
-        translate("Track.sending") + "(" + translate('Track.land').trim() + ")",
-        isDark);
-    LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
-      if (stopdemo == false) {
-        _showToast(
-            translate('Track.Visualize') +
-                "(" +
-                translate('Track.land').trim() +
-                ")",
-            isDark);
-        await LGConnection().cleanOrbit();
-        await Future.delayed(Duration(seconds: 6)).then((value) {
-          _showToast(
-              translate('map.buildorbit') +
-                  "(" +
-                  translate('Track.land').trim() +
-                  ")",
-              isDark);
-          playOrbit();
-        });
-
-        await Future.delayed(Duration(seconds: 50)).then((value) {
-          _Six(isDark);
-        });
-      } else {
-        LGConnection().cleanVisualization();
-      }
-    });
-  }
-
-  _Six(bool isDark) async {
-    _showToast(
-        translate("Track.loading") + "(" + translate('Track.So2').trim() + ")",
-        isDark);
-    await _read(5);
-    await LGConnection().openBalloon(
-        projectname[5],
-        translate('Track.So2').trim(),
-        translate("info.So2.date"),
-        240,
-        translate("info.description") + " " + translate("info.So2.description"),
-        "Sentinel EO Browser, GDACS, Twitter | Platform ADAM",
-        translate('title.name'),
-        "so2_infographic.gif");
-    _showToast(
-        translate("Track.sending") + "(" + translate('Track.So2').trim() + ")",
-        isDark);
-    LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
-      if (stopdemo == false) {
-        _showToast(
-            translate('Track.Visualize') +
-                "(" +
-                translate('Track.So2').trim() +
-                ")",
-            isDark);
-        await LGConnection().cleanOrbit();
-        await Future.delayed(Duration(seconds: 6)).then((value) {
-          _showToast(
-              translate('map.buildorbit') +
-                  "(" +
-                  translate('Track.So2').trim() +
-                  ")",
-              isDark);
-          playOrbit();
-        });
-
-        await Future.delayed(Duration(seconds: 50)).then((value) {
-          _Seven(isDark);
-        });
-      } else {
-        LGConnection().cleanVisualization();
-      }
-    });
-  }
-
-  _Seven(bool isDark) async {
-    _showToast(
-        translate("Track.loading") +
-            "(" +
-            translate('Track.situation').trim() +
-            ")",
-        isDark);
-    await _read(6);
-    await LGConnection().openBalloon(
-        projectname[6],
-        translate('Track.situation').trim(),
-        translate("info.situation.date"),
-        270,
-        translate("info.description") +
-            " " +
-            translate("info.situation.description"),
-        "Instituto Geográfico Nacional, GDACS, ERCC Portal",
-        translate('title.name'),
-        "situation_infographic.png");
-    _showToast(
-        translate("Track.sending") +
-            "(" +
-            translate('Track.situation').trim() +
-            ")",
-        isDark);
-    LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
-      if (stopdemo == false) {
-        _showToast(
-            translate('Track.Visualize') +
-                "(" +
-                translate('Track.situation').trim() +
-                ")",
-            isDark);
-        await LGConnection().cleanOrbit();
-        await Future.delayed(Duration(seconds: 6)).then((value) {
-          _showToast(
-              translate('map.buildorbit') +
-                  "(" +
-                  translate('Track.situation').trim() +
-                  ")",
-              isDark);
-          playOrbit();
-        });
-
-        await Future.delayed(Duration(seconds: 50)).then((value) {
-          _Eight(isDark);
-        });
-      } else {
-        LGConnection().cleanVisualization();
-      }
-    });
-  }
-
-  _Eight(bool isDark) async {
-    _showToast(
-        translate("Track.loading") +
-            "(" +
-            translate('Track.located').trim() +
-            ")",
-        isDark);
-    await _read(7);
-    await LGConnection().openBalloon(
-        projectname[7],
-        translate('Track.located').trim(),
-        translate("info.located.date"),
-        230,
-        translate("info.description") +
-            " " +
-            translate("info.located.description"),
-        "Instituto Geográfico Nacional",
-        translate('title.name'),
-        "locatedevents_infographic.jpg");
-    _showToast(
-        translate("Track.sending") +
-            "(" +
-            translate('Track.located').trim() +
-            ")",
-        isDark);
-    LGConnection().sendToLG(kml.mount(), finalname).then((value) async {
-      if (stopdemo == false) {
-        _showToast(
-            translate('Track.Visualize') +
-                "(" +
-                translate('Track.located').trim() +
-                ")",
-            isDark);
-        await LGConnection().cleanOrbit();
-        await Future.delayed(Duration(seconds: 6)).then((value) {
-          _showToast(
-              translate('map.buildorbit') +
-                  "(" +
-                  translate('Track.located').trim() +
-                  ")",
-              isDark);
-          playOrbit();
-        });
-      } else {
-        LGConnection().cleanVisualization();
-      }
-    });
-  }
-
   playOrbit() async {
     await LGConnection()
         .buildOrbit(Orbit.buildOrbit(Orbit.generateOrbitTag(LookAt(
@@ -658,7 +254,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                     child: Builder(
                                       builder: (context) => IconButton(
                                         icon: Image.asset(
-                                            'assets/icons/historic.png'),
+                                            'assets/icons/wheat.png'),
                                         onPressed: null,
                                       ),
                                     )),
@@ -712,7 +308,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                     child: Builder(
                                       builder: (context) => IconButton(
                                         icon: Image.asset(
-                                            'assets/icons/lavaflow.png'),
+                                            'assets/icons/ladybug.png'),
                                         onPressed: null,
                                       ),
                                     )),
@@ -770,7 +366,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                   child: Builder(
                                     builder: (context) => IconButton(
                                       icon: Image.asset(
-                                          'assets/icons/prehistoric.png'),
+                                          'assets/icons/meadow.png'),
                                       onPressed: null,
                                     ),
                                   )),
@@ -1062,24 +658,6 @@ class _SendtoLGState extends State<SendtoLG> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Builder(
-                          builder: (context) => IconButton(
-                              icon: themeNotifier.isDark
-                                  ? Image.asset(
-                                      'assets/icons/calendar_dark.png')
-                                  : Image.asset('assets/icons/calendar.png'),
-                              iconSize: 65,
-                              onPressed: () {
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        CustomBuilder(),
-                                  ),
-                                );
-                              })),
-                      SizedBox(
-                        width: 20,
-                      ),
                       SizedBox(
                         width: 360,
                         child: loading
@@ -1179,44 +757,6 @@ class _SendtoLGState extends State<SendtoLG> {
                       SizedBox(
                         width: 18,
                       ),
-                      isdemoactive
-                          ? Transform.scale(
-                              scale: 0.925,
-                              child: Builder(
-                                  builder: (context) => IconButton(
-                                        icon: themeNotifier.isDark
-                                            ? Image.asset(
-                                                'assets/icons/stop-button-black.png')
-                                            : Image.asset(
-                                                'assets/icons/stop-button.png'),
-                                        iconSize: 70,
-                                        onPressed: () {
-                                          // A demo of all buttons
-                                          setState(() {
-                                            stopdemo = true;
-                                            isdemoactive = false;
-                                          });
-                                        },
-                                      )))
-                          : Transform.scale(
-                              scale: 1.25,
-                              child: Builder(
-                                  builder: (context) => IconButton(
-                                        icon: themeNotifier.isDark
-                                            ? Image.asset(
-                                                'assets/icons/demo_dark.png')
-                                            : Image.asset(
-                                                'assets/icons/demo.png'),
-                                        iconSize: 70,
-                                        onPressed: () {
-                                          // A demo of all buttons
-                                          setState(() {
-                                            stopdemo = false;
-                                            isdemoactive = true;
-                                          });
-                                          _One(themeNotifier.isDark);
-                                        },
-                                      )))
                     ],
                   ),
                 ],
@@ -1273,7 +813,7 @@ http://maps.google.com/mapfiles/kml/paddle/purple-blank.png
 <table width="400" border="0" cellspacing="0" cellpadding="5">
   <tr>
     <td colspan="2" align="center">
-      <img src="https://raw.githubusercontent.com/yashrajbharti/kml-images/main/volcano.png" alt="picture" width="150" height="150" />
+      <img src="https://raw.githubusercontent.com/yashrajbharti/kml-images/main/leaf.png" alt="picture" width="150" height="150" />
     </td>
   </tr>
   <tr>
@@ -1408,26 +948,26 @@ http://maps.google.com/mapfiles/kml/paddle/purple-blank.png
     );
 
     LookAt flyto = LookAt(
-      projectname == "Historic_Track"
+      projectname == "Crop_Field"
           ? -17.885454
           : projectname == "Located_Events"
               ? -17.834886
               : projectname == "SO2_Emission"
                   ? -7.561565
-                  : projectname == "Prehistoric_Track"
+                  : projectname == "Fields"
                       ? -17.885454
-                      : projectname == "Lava_Flow"
+                      : projectname == "Insect"
                           ? -17.892286
                           : -17.895486,
-      projectname == "Historic_Track"
+      projectname == "Crop_Field"
           ? 28.556656
           : projectname == "Located_Events"
               ? 28.564986
               : projectname == "SO2_Emission"
                   ? 33.561245
-                  : projectname == "Prehistoric_Track"
+                  : projectname == "Fields"
                       ? 28.556656
-                      : projectname == "Lava_Flow"
+                      : projectname == "Insect"
                           ? 28.616354
                           : projectname == "Affected_Areas"
                               ? 28.616354
@@ -1438,7 +978,7 @@ http://maps.google.com/mapfiles/kml/paddle/purple-blank.png
                                       : 28.610478,
       projectname == "Located_Events"
           ? '${61708.9978371 / int.parse(credencials['numberofrigs'])}'
-          : projectname == "Lava_Flow"
+          : projectname == "Insect"
               ? '${18208.9978371 / int.parse(credencials['numberofrigs'])}'
               : projectname == "Landscape"
                   ? '${65208.997837 / int.parse(credencials['numberofrigs'])}'
@@ -1446,23 +986,23 @@ http://maps.google.com/mapfiles/kml/paddle/purple-blank.png
                       ? '${18208.9978371 / int.parse(credencials['numberofrigs'])}'
                       : projectname == "Situation"
                           ? '${75208.9978371 / int.parse(credencials['numberofrigs'])}'
-                          : projectname == "Historic_Track"
+                          : projectname == "Crop_Field"
                               ? '${151708.997837 / int.parse(credencials['numberofrigs'])}'
                               : projectname == "SO2_Emission"
                                   ? '${10500001.9978 / int.parse(credencials['numberofrigs'])}'
-                                  : projectname == "Prehistoric_Track"
+                                  : projectname == "Fields"
                                       ? '${151708.997837 / int.parse(credencials['numberofrigs'])}'
                                       : '${91708.9978371 / int.parse(credencials['numberofrigs'])}',
-      projectname == "Historic_Track"
+      projectname == "Crop_Field"
           ? '41.82725143432617'
           : projectname == "SO2_Emission"
               ? '25'
-              : projectname == "Prehistoric_Track"
+              : projectname == "Fields"
                   ? '41.82725143432617'
                   : '45',
-      projectname == "Historic_Track"
+      projectname == "Crop_Field"
           ? ' 61.403038024902344'
-          : projectname == "Prehistoric_Track"
+          : projectname == "Fields"
               ? ' 61.403038024902344'
               : '0',
     );

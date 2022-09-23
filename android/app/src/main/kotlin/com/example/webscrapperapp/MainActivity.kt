@@ -1,4 +1,4 @@
-package lapalma.voltrac
+package crop.amiga
 
 import io.flutter.embedding.android.FlutterActivity
 

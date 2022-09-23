@@ -1,8 +1,8 @@
 <p align="center">
-  <img alt="VolTrac" src="https://raw.githubusercontent.com/yashrajbharti/La-Palma-Volcano-Eruption-Tracking-Tool/main/assets/volcano.png" height="250px">
+  <img alt="VolTrac" src="https://raw.githubusercontent.com/yashrajbharti/La-Palma-Volcano-Eruption-Tracking-Tool/main/assets/leaf.png" height="250px">
 </p>  
   
-<h1 align="center"> La Palma VolTrac</h1>
+<h1 align="center"> Amiga Crop</h1>
   
 <p align="center">
   <img alt="" src="https://github.com/yashrajbharti/Volcano-Tracker-Web-Scraper-demo/actions/workflows/main.yml/badge.svg">
@@ -60,7 +60,7 @@ Lastly, the app has an info tab that lists helpful information along with the so
 * 10-inch Android Tablet
 
 #### Steps:
-* Download and install the app using this [Play Store link](https://play.google.com/store/apps/details?id=lapalma.voltrac). Alternatively, you can scan the QR code showcased at top to download and install the app.
+* Download and install the app using this [Play Store link](https://play.google.com/store/apps/details?id=crop.amiga). Alternatively, you can scan the QR code showcased at top to download and install the app.
 * To connect to the Liquid Galaxy, tap on menu icon and go to Connection Manager; then fill the details similar to below:
 <p align="center">
   <img alt="" src="https://raw.githubusercontent.com/yashrajbharti/kml-images/main/connect.jpeg" width="700px">

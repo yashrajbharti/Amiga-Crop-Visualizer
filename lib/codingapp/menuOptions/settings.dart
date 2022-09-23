@@ -4,7 +4,6 @@ import 'package:ssh2/ssh2.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:ui' as ui;
 import 'package:voltrac/codingapp/drawer.dart';
-import 'package:voltrac/codingapp/translate.dart';
 import 'package:provider/provider.dart';
 import 'package:voltrac/codingapp/theme-storage.dart';
 
@@ -192,6 +191,7 @@ class SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     if (!loaded) init();
+    // ignore: unused_local_variable
     var localizationDelegate = LocalizedApp.of(context).delegate;
 
     return Consumer<ThemeModel>(
@@ -393,34 +393,6 @@ class SettingsState extends State<Settings> {
                             padding: EdgeInsets.all(15),
                             shape: StadiumBorder(),
                           ),
-                        ),
-                      ),
-                    ),
-                    Divider(
-                      color: themeNotifier.isDark
-                          ? Color.fromARGB(255, 204, 204, 204)
-                          : Color.fromARGB(255, 74, 74, 74),
-                      thickness: 1,
-                    ),
-                    ListTile(
-                      leading: Text(
-                        translate('language.flag'),
-                        style: TextStyle(fontSize: 20),
-                      ),
-                      title: Text(translate('language.selected_message', args: {
-                        'language': translate(
-                            'language.name.${localizationDelegate.currentLocale.languageCode}')
-                      })),
-                      trailing: IconButton(
-                        onPressed: () {
-                          onActionSheetPress(context, themeNotifier.isDark);
-                        },
-                        icon: Icon(
-                          Icons.translate_rounded,
-                          size: 32,
-                          color: themeNotifier.isDark
-                              ? Color.fromARGB(255, 204, 204, 204)
-                              : Color.fromARGB(255, 74, 74, 74),
                         ),
                       ),
                     ),

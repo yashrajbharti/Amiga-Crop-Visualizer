@@ -14,15 +14,6 @@ main() async {
       fallbackLocale: 'en_US',
       supportedLocales: [
         'en_US',
-        'es',
-        'hi',
-        'de',
-        'ar',
-        'ru',
-        'ja',
-        'zh',
-        'sq',
-        'pt'
       ]);
 
   runApp(LocalizedApp(delegate, MyApp()));
