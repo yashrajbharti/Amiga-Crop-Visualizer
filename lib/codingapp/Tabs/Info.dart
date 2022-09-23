@@ -199,7 +199,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
   @override
   Widget build(BuildContext context) {
     final List<Widget> track_cards = [
-      // Historical Track
+      // croporical Track
       Consumer<ThemeModel>(
           builder: (context, ThemeModel themeNotifier, child) => Container(
                 margin: EdgeInsets.fromLTRB(90, 0, 90, 0),
@@ -208,7 +208,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                   Align(
                     alignment: Alignment.center,
                     child: Text(
-                      translate('Track.hist'),
+                      translate('Track.crop'),
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 34.5,
@@ -249,7 +249,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                             ],
                           )),
                       SizedBox(
-                        height: 90,
+                        height: 60,
                       ),
                       new Expanded(
                           flex: 9,
@@ -258,7 +258,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               new Text(
-                                translate(""),
+                                translate(
+                                    "  Gives a visualization of the good and bad (defective) crops."),
                                 style: new TextStyle(
                                     fontSize: 18.5, color: Colors.white70),
                               ),
@@ -269,9 +270,6 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                         right: 70.0,
                       )),
                     ],
-                  ),
-                  SizedBox(
-                    height: 10,
                   ),
                   new Row(
                     children: <Widget>[
@@ -310,7 +308,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               new Text(
-                                translate(""),
+                                translate("  24 September 2022"),
                                 style: new TextStyle(
                                   fontSize: 18.5,
                                   color: Colors.white70,
@@ -361,7 +359,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                             ],
                           )),
                       SizedBox(
-                        height: 90,
+                        height: 60,
                       ),
                       new Expanded(
                         flex: 9,
@@ -369,11 +367,38 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text(translate(""),
-                                style: TextStyle(
-                                    fontSize: 18.5,
-                                    color: Colors.white70,
-                                    fontFamily: "GoogleSans")),
+                            Row(children: <Widget>[
+                              Builder(
+                                builder: (context) => IconButton(
+                                  icon: Image.asset('assets/icons/tree.png'),
+                                  onPressed: null,
+                                ),
+                              ),
+                              Text(
+                                "Good Crop",
+                                style: new TextStyle(
+                                  fontSize: 18.5,
+                                  color: Colors.white70,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Builder(
+                                builder: (context) => IconButton(
+                                  icon:
+                                      Image.asset('assets/icons/tree-bad.png'),
+                                  onPressed: null,
+                                ),
+                              ),
+                              Text(
+                                "Bad Crop",
+                                style: new TextStyle(
+                                  fontSize: 18.5,
+                                  color: Colors.white70,
+                                ),
+                              ),
+                            ]),
                             SizedBox(
                               height: 8,
                             ),
@@ -387,7 +412,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                     ],
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 50,
                   ),
                   new Row(
                     children: <Widget>[
@@ -419,10 +444,32 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                               ),
                             ],
                           )),
-                      new Padding(
-                          padding: new EdgeInsets.only(
-                        right: 70.0,
-                      )),
+                      new Expanded(
+                          flex: 9,
+                          child: new Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Row(
+                                  children: <Widget>[
+                                    GestureDetector(
+                                      onTap: () {
+                                        _launchURL(
+                                            'https://www.lleidadrone.com/2022/09/amiga-farmthon-fira-de-sant-miquel-2022.html');
+                                      },
+                                      child: Text(
+                                        "Amiga Drone",
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.white70,
+                                          decoration: TextDecoration.underline,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ])),
                     ],
                   ),
                 ]),
@@ -446,7 +493,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                 ),
               )),
 
-      // Lava Flow Track
+      // insect Flow Track
       Consumer<ThemeModel>(
           builder: (context, ThemeModel themeNotifier, child) => Container(
                 margin: EdgeInsets.fromLTRB(90, 0, 90, 0),
@@ -455,7 +502,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                   Align(
                     alignment: Alignment.center,
                     child: Text(
-                      translate('Track.lava'),
+                      translate('Track.insect'),
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 34.5,
@@ -502,7 +549,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               new Text(
-                                translate(""),
+                                translate(
+                                    "  Gives a visualization of the good and bad (harmful) insects."),
                                 style: new TextStyle(
                                     fontSize: 18.5, color: Colors.white70),
                               ),
@@ -557,7 +605,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               new Text(
-                                translate(""),
+                                translate("  24 September 2022"),
                                 style: new TextStyle(
                                   fontSize: 18.5,
                                   color: Colors.white70,
@@ -605,7 +653,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                             ],
                           )),
                       SizedBox(
-                        height: 90,
+                        height: 60,
                       ),
                       new Expanded(
                         flex: 9,
@@ -613,11 +661,71 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text(translate(""),
-                                style: TextStyle(
-                                    fontSize: 18.5,
-                                    color: Colors.white70,
-                                    fontFamily: "GoogleSans")),
+                            Row(children: <Widget>[
+                              Builder(
+                                builder: (context) => IconButton(
+                                  icon:
+                                      Image.asset('assets/icons/butterfly.png'),
+                                  onPressed: null,
+                                ),
+                              ),
+                              Text(
+                                "ButterFly",
+                                style: new TextStyle(
+                                  fontSize: 18.5,
+                                  color: Colors.white70,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Builder(
+                                builder: (context) => IconButton(
+                                  icon: Image.asset('assets/icons/bee.png'),
+                                  onPressed: null,
+                                ),
+                              ),
+                              Text(
+                                "Bee",
+                                style: new TextStyle(
+                                  fontSize: 18.5,
+                                  color: Colors.white70,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Builder(
+                                builder: (context) => IconButton(
+                                  icon: Image.asset('assets/icons/worm.png'),
+                                  onPressed: null,
+                                ),
+                              ),
+                              Text(
+                                "Earthworm",
+                                style: new TextStyle(
+                                  fontSize: 18.5,
+                                  color: Colors.white70,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Builder(
+                                builder: (context) => IconButton(
+                                  icon: Image.asset(
+                                      'assets/icons/stag-beetle.png'),
+                                  onPressed: null,
+                                ),
+                              ),
+                              Text(
+                                "Flea Beetle (harmful)",
+                                style: new TextStyle(
+                                  fontSize: 18.5,
+                                  color: Colors.white70,
+                                ),
+                              ),
+                            ]),
                             SizedBox(
                               height: 8,
                             ),
@@ -631,7 +739,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                     ],
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 50,
                   ),
                   new Row(
                     children: <Widget>[
@@ -665,11 +773,30 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                           )),
                       new Expanded(
                           flex: 9,
-                          child: new Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[],
-                          )),
+                          child: new Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Row(
+                                  children: <Widget>[
+                                    GestureDetector(
+                                      onTap: () {
+                                        _launchURL(
+                                            'https://www.lleidadrone.com/2022/09/amiga-farmthon-fira-de-sant-miquel-2022.html');
+                                      },
+                                      child: Text(
+                                        "Amiga Drone",
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.white70,
+                                          decoration: TextDecoration.underline,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ])),
                       new Padding(
                           padding: new EdgeInsets.only(
                         right: 70.0,
@@ -696,7 +823,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                   ],
                 ),
               )),
-      // Pre-historic Track
+      // Pre-croporic Track
       Consumer<ThemeModel>(
           builder: (context, ThemeModel themeNotifier, child) => Container(
                 margin: EdgeInsets.fromLTRB(90, 0, 90, 0),
@@ -705,7 +832,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                   Align(
                     alignment: Alignment.center,
                     child: Text(
-                      translate('Track.prehistoric'),
+                      translate('Track.fields'),
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 34.5,
@@ -752,7 +879,8 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               new Text(
-                                translate(""),
+                                translate(
+                                    "  Gives a visualization of the different types of soil."),
                                 style: new TextStyle(
                                     fontSize: 18.5, color: Colors.white70),
                               ),
@@ -807,7 +935,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               new Text(
-                                translate(""),
+                                translate("  24 September 2022"),
                                 style: new TextStyle(
                                   fontSize: 18.5,
                                   color: Colors.white70,
@@ -855,7 +983,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                             ],
                           )),
                       SizedBox(
-                        height: 90,
+                        height: 60,
                       ),
                       new Expanded(
                         flex: 9,
@@ -863,11 +991,80 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text(translate(""),
-                                style: TextStyle(
-                                    fontSize: 18.5,
-                                    color: Colors.white70,
-                                    fontFamily: "GoogleSans")),
+                            Row(children: <Widget>[
+                              Icon(
+                                Icons.square_rounded,
+                                color: Color.fromARGB(255, 14, 105, 179),
+                                size: 45.0,
+                              ),
+                              Text(
+                                "Type 1",
+                                style: new TextStyle(
+                                  fontSize: 18.5,
+                                  color: Colors.white70,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Icon(
+                                Icons.square_rounded,
+                                color: Colors.orange,
+                                size: 45.0,
+                              ),
+                              Text(
+                                "Type 2",
+                                style: new TextStyle(
+                                  fontSize: 18.5,
+                                  color: Colors.white70,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Icon(
+                                Icons.square_rounded,
+                                color: Color.fromARGB(255, 248, 133, 227),
+                                size: 45.0,
+                              ),
+                              Text(
+                                "Type 3",
+                                style: new TextStyle(
+                                  fontSize: 18.5,
+                                  color: Colors.white70,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Icon(
+                                Icons.square_rounded,
+                                color: Colors.yellow,
+                                size: 45.0,
+                              ),
+                              Text(
+                                "Type 4",
+                                style: new TextStyle(
+                                  fontSize: 18.5,
+                                  color: Colors.white70,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Icon(
+                                Icons.square_rounded,
+                                color: Color.fromARGB(255, 73, 201, 77),
+                                size: 45.0,
+                              ),
+                              Text(
+                                "Type 5",
+                                style: new TextStyle(
+                                  fontSize: 18.5,
+                                  color: Colors.white70,
+                                ),
+                              ),
+                            ]),
                             SizedBox(
                               height: 8,
                             ),
@@ -881,7 +1078,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                     ],
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 50,
                   ),
                   new Row(
                     children: <Widget>[
@@ -915,11 +1112,30 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                           )),
                       new Expanded(
                           flex: 9,
-                          child: new Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[],
-                          )),
+                          child: new Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Row(
+                                  children: <Widget>[
+                                    GestureDetector(
+                                      onTap: () {
+                                        _launchURL(
+                                            'https://www.lleidadrone.com/2022/09/amiga-farmthon-fira-de-sant-miquel-2022.html');
+                                      },
+                                      child: Text(
+                                        "Amiga Drone",
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.white70,
+                                          decoration: TextDecoration.underline,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ])),
                       new Padding(
                           padding: new EdgeInsets.only(
                         right: 70.0,
@@ -1064,7 +1280,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                                         RotatedBox(
                                             quarterTurns: 1,
                                             child: Icon(
-                                              Icons.location_on_sharp,
+                                              Icons.square_rounded,
                                               color: Color.fromARGB(
                                                   255, 228, 6, 9),
                                               size: 45.0,

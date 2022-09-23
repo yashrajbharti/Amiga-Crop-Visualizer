@@ -226,17 +226,18 @@ class _SendtoLGState extends State<SendtoLG> {
                               await _read(0);
                               await LGConnection().openBalloon(
                                   projectname[0],
-                                  translate('Track.hist').trim(),
-                                  translate("info.hist.date"),
+                                  translate('Track.crop').trim(),
+                                  "24 September 2022",
                                   240,
                                   translate("info.description") +
                                       " " +
-                                      translate("info.hist.description"),
-                                  "COPERNICUS, ResearchGate, Global Volcanism Program",
+                                      translate(
+                                          "Gives a visualization of the good and bad (defective) crops."),
+                                  "Amiga Drone",
                                   translate('title.name'),
-                                  "historic_infographic.png");
+                                  "crop_infographic.jpg");
                               setState(() {
-                                _duration = 5290;
+                                _duration = 8290;
                               });
                               jumpToPage(0);
                               _showToast(translate('Track.ready'),
@@ -247,7 +248,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                 SizedBox(
                                   width: 10,
                                 ),
-                                Text(translate('Track.hist'),
+                                Text(translate('Track.crop'),
                                     style: TextStyle(fontSize: 40)),
                                 Transform.scale(
                                     scale: 1.5,
@@ -281,15 +282,15 @@ class _SendtoLGState extends State<SendtoLG> {
                               await _read(1);
                               await LGConnection().openBalloon(
                                   projectname[1],
-                                  translate('Track.lava').trim(),
-                                  translate("info.lava.date"),
+                                  translate('Track.insect').trim(),
+                                  "24 September 2022",
                                   240,
                                   translate("info.description") +
                                       " " +
-                                      translate("info.lava.description"),
-                                  "COPERNICUS, Wikipedia | Cumbre Vieja",
+                                      "Gives a visualization of the good and bad (harmful) insects.",
+                                  "Amiga Drone",
                                   translate('title.name'),
-                                  "lavaflow_infographic.jpg");
+                                  "insect_infographic.jpg");
                               setState(() {
                                 _duration = 3000;
                               });
@@ -302,7 +303,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                 SizedBox(
                                   width: 10,
                                 ),
-                                Text(translate('Track.lava'),
+                                Text(translate('Track.insect'),
                                     style: TextStyle(fontSize: 40)),
                                 Transform.scale(
                                     scale: 1.5,
@@ -339,15 +340,15 @@ class _SendtoLGState extends State<SendtoLG> {
                             await _read(2);
                             await LGConnection().openBalloon(
                                 projectname[2],
-                                translate('Track.prehistoric').trim(),
-                                translate("info.prehistoric.date"),
+                                translate('Track.fields').trim(),
+                                "24 September 2022",
                                 270,
                                 translate("info.description") +
                                     " " +
-                                    translate("info.prehistoric.description"),
-                                "ResearchGate, Global Volcanism Program",
+                                    "Gives a visualization of the different types of soil.",
+                                "Amiga Drone",
                                 translate('title.name'),
-                                "prehistoric_infographic.png");
+                                "fields_infographic.jpg");
                             setState(() {
                               _duration = 2080;
                             });
@@ -360,7 +361,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               SizedBox(
                                 width: 10,
                               ),
-                              Text(translate('Track.prehistoric'),
+                              Text(translate('Track.fields'),
                                   style: TextStyle(fontSize: 40)),
                               Transform.scale(
                                   scale: 1.5,
@@ -406,7 +407,8 @@ class _SendtoLGState extends State<SendtoLG> {
                                             fontWeight: ui.FontWeight.w500)),
                                     Icon(
                                       Icons.location_on_sharp,
-                                      color: ui.Color.fromARGB(255, 228, 6, 9),
+                                      color:
+                                          ui.Color.fromARGB(255, 86, 177, 71),
                                       size: 45.0,
                                     ),
                                   ],

@@ -23,13 +23,13 @@
 		}
 	},
 	"Track": {
-		"hist": "  Crop Field Map  ",
-		"lava": "  Insect Track Map   ",
+		"crop": "  Crop Field Map  ",
+		"insect": "  Insect Track Map   ",
 		"situation": "  Situation Map  ",
 		"aff": "  Affected Areas Map  ",
 		"land": "  Landscape Map  ",
 		"So2": "  SO\u2082 Emissions Map  ",
-		"prehistoric": " Fields Track Map   ",
+		"fields": " Fields Track Map   ",
 		"located": "  Located Events Map  ",
 		"visual": "Visualize in LG",
 		"ready": "Ready to Visualize!",
@@ -147,33 +147,33 @@
 		"date": "Date of Event:",
 		"legend": "Legend:",
 		"sources": "Sources:",
-		"hist": {
-			"description": "This Track represents Lava Flow over the years on the Amiga island. Recorded history confirms these events, with the first volcanic activity in 1480 AD to the latest eruption from the Cumbre Vieja in 2021. Most of them have a Volcanic Explosivity Index (VEI) of 2, but the latest outbreak in 2021 had a VEI of 3.",
+		"crop": {
+			"description": "This Track represents insect Flow over the years on the Amiga island. Recorded history confirms these events, with the first volcanic activity in 1480 AD to the latest eruption from the Cumbre Vieja in 2021. Most of them have a Volcanic Explosivity Index (VEI) of 2, but the latest outbreak in 2021 had a VEI of 3.",
 			"date": "Various years between 1480 and 2021",
-			"legend": "Historical Lava Flow data of the following years:",
+			"legend": "croporical insect Flow data of the following years:",
 			"and": "1677 & 1971",
-			"lava": "Lava symbol"
+			"insect": "insect symbol"
 		},
-		"lava": {
-			"description": "The Insect Track Map represents Lava flow data from every 10-15 days. This data shows the evolution of Lava Flow, it's effect on the terrain, and the Lava Flow temperatures as it spreads in the Amiga region and finally reaches the sea. The lava flow rate was 10m/s, and the highest temperature of Lava was around 1270°C.",
+		"insect": {
+			"description": "The Insect Track Map represents insect flow data from every 10-15 days. This data shows the evolution of insect Flow, it's effect on the terrain, and the insect Flow temperatures as it spreads in the Amiga region and finally reaches the sea. The insect flow rate was 10m/s, and the highest temperature of insect was around 1270°C.",
 			"date": "24 September to 18 December, 2021",
-			"legend": "Legend for the evolution of Lava Flow data from September 2021 to December 2021:",
+			"legend": "Legend for the evolution of insect Flow data from September 2021 to December 2021:",
 			"vents": "Vents"
 		},
-		"prehistoric": {
+		"fields": {
 			"description": "These Volcanic activities are from the time in history before humankind wrote down events. Most of these are evident from Radiocarbon (uncorrected) and Potassium-Argon testing. The data is in Ka, which stands for kiloannus or kiloannum (ka), a unit of time equal to one thousand (10\u00B3) years.",
 			"date": "Various years in the range 6050 BCE ± 1500 years to 1480 ± 10 years",
-			"legend": "Pre-Historical Lava Flow data of the following calender years:",
-			"lava": "Lava symbol"
+			"legend": "Pre-croporical insect Flow data of the following calender years:",
+			"insect": "insect symbol"
 		},
 		"aff": {
-			"description": "This Track visualizes the data of the transportation facilities, houses, and buildings destroyed and possibly damaged and the harmful effect of lava on the natural lands and farms of the Amiga region.",
+			"description": "This Track visualizes the data of the transportation facilities, houses, and buildings destroyed and possibly damaged and the harmful effect of insect on the natural lands and farms of the Amiga region.",
 			"date": "24 September to 15 December, 2021",
 			"legend": "Affected Areas data of Transportation, Built up, and Facilities grading:",
 			"destroyed": "Buildings & Houses Destroyed  ",
 			"possible": "Possibly Destroyed  ",
 			"novisible": "No Visible Damage",
-			"lava": "Lava Flow ",
+			"insect": "insect Flow ",
 			"vents": "Vents  ",
 			"area": "Area of interest    ",
 			"hydro": "Hydrography",
@@ -182,8 +182,8 @@
 		"land": {
 			"description": "The Cumbre Vieja Volcanic activity of 2021 left a mark on the Amiga region. The Operational Land Imager (OLI) on Landsat 8 captured this natural-color image showing how drastically the Todoque and El Paraíso areas have changed as of 15 December, 2021.",
 			"date": "20 September to 15 December, 2021",
-			"legend": "Legend for Changed landscape of Amiga due to Lava Flow:",
-			"landscape": "Landscape due to Lava Flow    ",
+			"legend": "Legend for Changed landscape of Amiga due to insect Flow:",
+			"landscape": "Landscape due to insect Flow    ",
 			"infoicon": "Info icon for Changed Landscape of Amiga    "
 		},
 		"So2": {
@@ -193,20 +193,20 @@
 			"volcano": "Cumbre Vieja Volcano"
 		},
 		"situation": {
-			"description": "This Track gives a situational analysis of the start of the volcanic eruption at Amiga. Spanish Civil Protection evacuated >6,000 people on 19th Sep. Lava Flow began on 20th Sep at 18:50 UTC, and IGN reported 180 Damaged houses.",
+			"description": "This Track gives a situational analysis of the start of the volcanic eruption at Amiga. Spanish Civil Protection evacuated >6,000 people on 19th Sep. insect Flow began on 20th Sep at 18:50 UTC, and IGN reported 180 Damaged houses.",
 			"date": "19 September, 2021 at 14.10 UTC (And Tremors between 11-21 September)",
 			"legend": "Legend for the Situational Overview:",
 			"main": "Main Eruptive Event   ",
 			"orange": "Orange Alert  ",
 			"maritime": "Maritime Exclusion Zone  ",
 			"closed": "Closed Roads    ",
-			"lava": "Lava Flow ",
+			"insect": "insect Flow ",
 			"Text": "  Text  ",
 			"municipality": "Municipalities under evacuation \norder / emergency declaration",
 			"data": " 21 Sep (Tremor)"
 		},
 		"located": {
-			"description": "This Track shows the Earthquake data of the tremors that happened throughout the volcanic activity period, i.e., from September to December. Earthquake is measured in mbLg units, which is the Body Wave Magnitude using the Lg wave. The Earthquakes that happen throughout the volcanic activity and the lava flow are responsible for the Evolution of Terrain.",
+			"description": "This Track shows the Earthquake data of the tremors that happened throughout the volcanic activity period, i.e., from September to December. Earthquake is measured in mbLg units, which is the Body Wave Magnitude using the Lg wave. The Earthquakes that happen throughout the volcanic activity and the insect flow are responsible for the Evolution of Terrain.",
 			"date": "12 September to 15 December, 2021",
 			"legend": "Legend for Categorization of the Seismic data based on the magnitude:"
 		}
@@ -241,7 +241,7 @@
 	"tour": {
 		"take": "Take App tour",
 		"app": "AmigaCrop App",
-		"desc": "⬧ The AmigaCrop App's first screen is divided into Three main tabs: Track, Map and Info. \n⬧ Track tab helps us visualize the various tracks such as Lava Flow, Affected Areas, Situation, etc. \n⬧ Map Tab allows us to control the Liquid Galaxy by performing simple touch movements in the Google Map Flutter. One can find various other options to display and manage the KML data in the Map Tab. \n⬧ Info Tab gives detailed info of the Various Tracks we are visualizing. \n⬧ Tap on the highlighted menu icon to check the various menu options available in the App drawer.",
+		"desc": "⬧ The AmigaCrop App's first screen is divided into Three main tabs: Track, Map and Info. \n⬧ Track tab helps us visualize the various tracks such as insect Flow, Affected Areas, Situation, etc. \n⬧ Map Tab allows us to control the Liquid Galaxy by performing simple touch movements in the Google Map Flutter. One can find various other options to display and manage the KML data in the Map Tab. \n⬧ Info Tab gives detailed info of the Various Tracks we are visualizing. \n⬧ Tap on the highlighted menu icon to check the various menu options available in the App drawer.",
 		"help": "The Help Page has instructions for setting up the visualization, meaning of all the icons, and guide for troubleshooting the possible errors.",
 		"about": "The About Page informs about the app, what are some of it features and development credits.",
 		"custom": "The Custom Builder allows us to pick any two dates and get the colored KML visualization as per our want.",
