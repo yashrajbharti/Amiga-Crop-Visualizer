@@ -675,37 +675,11 @@ http://maps.google.com/mapfiles/kml/paddle/purple-blank.png
     );
 
     LookAt flyto = LookAt(
-      projectname == "Crop_Field"
-          ? -3.144586280853279
-          : projectname == "Fields"
-              ? -3.144586280853279
-              : projectname == "Insect"
-                  ? -3.144586280853279
-                  : -3.144586280853279,
-      projectname == "Crop_Field"
-          ? 39.29793673357732
-          : projectname == "Fields"
-              ? 39.29793673357732
-              : projectname == "Insect"
-                  ? 39.29793673357732
-                  : 39.29793673357732,
-      projectname == "Insect"
-          ? '${1208.9978371 / int.parse(credencials['numberofrigs'])}'
-          : projectname == "Crop_Field"
-              ? '${1708.997837 / int.parse(credencials['numberofrigs'])}'
-              : projectname == "Fields"
-                  ? '${1708.997837 / int.parse(credencials['numberofrigs'])}'
-                  : '${1708.9978371 / int.parse(credencials['numberofrigs'])}',
-      projectname == "Crop_Field"
-          ? '41.82725143432617'
-          : projectname == "Fields"
-              ? '41.82725143432617'
-              : '45',
-      projectname == "Crop_Field"
-          ? ' 61.403038024902344'
-          : projectname == "Fields"
-              ? ' 61.403038024902344'
-              : '0',
+      -3.144586280853279,
+      39.29793673357732,
+      '${1208.9978371 / int.parse(credencials['numberofrigs'])}',
+      '45',
+      '0',
     );
     try {
       await client.connect();

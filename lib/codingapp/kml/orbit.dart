@@ -5,7 +5,7 @@ class Orbit {
     double heading = double.parse(marker.heading);
     int orbit = 0;
     String content = '';
-    String range = '40000';
+    String range = '400';
 
     while (orbit <= 36) {
       if (heading >= 360) heading -= 360;
@@ -20,7 +20,7 @@ class Orbit {
                   <tilt>60</tilt>
                   <range>${range}</range>
                   <gx:fovy>60</gx:fovy> 
-                  <altitude>3341.7995674</altitude> 
+                  <altitude>334.7995674</altitude> 
                   <gx:altitudeMode>absolute</gx:altitudeMode>
               </LookAt>
             </gx:FlyTo>
