@@ -13,6 +13,10 @@
   <img alt="" src="https://img.shields.io/github/repo-size/yashrajbharti/Amiga-Crop-Visualizer?color=cyan&label=Repo%20Size">
 </p>
   
+  <p align="center">
+  <img alt="Amiga" src="https://raw.githubusercontent.com/yashrajbharti/kml-images/main/amiga-tools.gif" height="300px">
+</p>  
+  
 ## About Amiga Crop Visualizer
 
 * This app takes Data from the Amiga Drone and shows it in colored KML onto the Liquid Galaxy. For demonstration purposes, we show a hardcoded data that replicates the data report from the Amiga Tractor.
