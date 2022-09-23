@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
 import 'package:provider/provider.dart';
-import 'package:voltrac/codingapp/theme-storage.dart';
-import 'package:voltrac/codingapp/mainpage.dart';
+import 'package:AmigaCrop/codingapp/theme-storage.dart';
+import 'package:AmigaCrop/codingapp/mainpage.dart';
 
 class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);
@@ -26,7 +26,7 @@ class _SplashState extends State<Splash> {
                 fontSize: 55,
                 color: Color.fromARGB(255, 204, 204, 204),
               ),
-              imageSrc: "assets/icons/volcanoandlogo.png",
+              imageSrc: "assets/amigaleaf.png",
               backgroundColor: themeNotifier.isDark
                   ? Color.fromARGB(255, 16, 16, 16)
                   : Color.fromARGB(255, 30, 30, 30),

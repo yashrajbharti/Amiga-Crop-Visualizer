@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_translate/flutter_translate.dart';
-import 'package:voltrac/codingapp/mainpage.dart';
-import 'package:voltrac/codingapp/menuOptions/help.dart';
-import 'package:voltrac/codingapp/menuOptions/lg_tasks.dart';
+import 'package:AmigaCrop/codingapp/mainpage.dart';
+import 'package:AmigaCrop/codingapp/menuOptions/help.dart';
+import 'package:AmigaCrop/codingapp/menuOptions/lg_tasks.dart';
 
-import 'package:voltrac/codingapp/menuOptions/settings.dart';
-import 'package:voltrac/codingapp/menuOptions/about.dart';
-import 'package:voltrac/codingapp/day_night_switch.dart';
+import 'package:AmigaCrop/codingapp/menuOptions/settings.dart';
+import 'package:AmigaCrop/codingapp/menuOptions/about.dart';
+import 'package:AmigaCrop/codingapp/day_night_switch.dart';
 import 'package:provider/provider.dart';
-import 'package:voltrac/codingapp/theme-storage.dart';
+import 'package:AmigaCrop/codingapp/theme-storage.dart';
 import 'package:feature_discovery/feature_discovery.dart';
 
 class Drawers extends StatefulWidget {
@@ -137,7 +137,7 @@ class _DrawersState extends State<Drawers> {
                                           HelpScreen(),
                                     ),
                                   )),
-                          SizedBox(height: 24),
+                          SizedBox(height: 44),
                           ListTile(
                               title: DescribedFeatureOverlay(
                                   featureId:
@@ -184,7 +184,7 @@ class _DrawersState extends State<Drawers> {
                                           AboutScreen(),
                                     ),
                                   )),
-                          SizedBox(height: 24),
+                          SizedBox(height: 44),
                           ListTile(
                               title: DescribedFeatureOverlay(
                                   featureId:
@@ -229,7 +229,7 @@ class _DrawersState extends State<Drawers> {
                                           LGtasks(),
                                     ),
                                   )),
-                          SizedBox(height: 24),
+                          SizedBox(height: 44),
                           ListTile(
                               title: DescribedFeatureOverlay(
                                   featureId:

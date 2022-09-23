@@ -3,9 +3,9 @@ import 'package:flutter_translate/flutter_translate.dart';
 import 'package:ssh2/ssh2.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:ui' as ui;
-import 'package:voltrac/codingapp/drawer.dart';
+import 'package:AmigaCrop/codingapp/drawer.dart';
 import 'package:provider/provider.dart';
-import 'package:voltrac/codingapp/theme-storage.dart';
+import 'package:AmigaCrop/codingapp/theme-storage.dart';
 
 class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
@@ -442,7 +442,7 @@ class LGConnection {
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
 <Document>
-	<name>VolTrac</name>
+	<name>AmigaCrop</name>
 	<open>1</open>
 	<description>The logo it located in the bottom left hand corner</description>
 	<Folder>
@@ -455,7 +455,7 @@ class LGConnection {
 			</ListStyle>
 		</Style>
 		<ScreenOverlay id="abc">
-			<name>VolTrac</name>
+			<name>AmigaCrop</name>
 			<Icon>
 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/alllogos.jpg</href>
 			</Icon>

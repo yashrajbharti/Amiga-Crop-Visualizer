@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(voltrac LANGUAGES CXX)
+project(AmigaCrop LANGUAGES CXX)
 
-set(BINARY_NAME "voltrac")
+set(BINARY_NAME "AmigaCrop")
 
 cmake_policy(SET CMP0063 NEW)
 

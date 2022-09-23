@@ -11,12 +11,12 @@ import 'package:percent_indicator/percent_indicator.dart';
 import 'package:ssh2/ssh2.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:provider/provider.dart';
-import 'package:voltrac/codingapp/kml/LookAt.dart';
-import 'package:voltrac/codingapp/kml/orbit.dart';
-import 'package:voltrac/codingapp/theme-storage.dart';
-import 'package:voltrac/codingapp/kml/kml.dart';
-import 'package:voltrac/codingapp/menuOptions/lg_tasks.dart';
-import 'package:voltrac/codingapp/Tabs/Info.dart';
+import 'package:AmigaCrop/codingapp/kml/LookAt.dart';
+import 'package:AmigaCrop/codingapp/kml/orbit.dart';
+import 'package:AmigaCrop/codingapp/theme-storage.dart';
+import 'package:AmigaCrop/codingapp/kml/kml.dart';
+import 'package:AmigaCrop/codingapp/menuOptions/lg_tasks.dart';
+import 'package:AmigaCrop/codingapp/Tabs/Info.dart';
 
 class SendtoLG extends StatefulWidget {
   SendtoLG({Key? key}) : super(key: key);

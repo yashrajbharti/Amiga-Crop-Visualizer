@@ -1,6 +1,6 @@
 {
-    "name": "voltrac",
-    "short_name": "voltrac",
+    "name": "AmigaCrop",
+    "short_name": "AmigaCrop",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:provider/provider.dart';
-import 'package:voltrac/codingapp/theme-storage.dart';
-import 'package:voltrac/codingapp/Tabs/Info.dart';
-import 'package:voltrac/codingapp/Tabs/Track_Tab.dart';
-import 'package:voltrac/codingapp/Tabs/Map_Tab.dart';
+import 'package:AmigaCrop/codingapp/theme-storage.dart';
+import 'package:AmigaCrop/codingapp/Tabs/Info.dart';
+import 'package:AmigaCrop/codingapp/Tabs/Track_Tab.dart';
+import 'package:AmigaCrop/codingapp/Tabs/Map_Tab.dart';
 
 class Layout extends StatefulWidget {
   Layout({Key? key}) : super(key: key);

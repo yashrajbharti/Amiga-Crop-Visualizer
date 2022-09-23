@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 
-import 'package:voltrac/codingapp/drawer.dart';
-import 'package:voltrac/codingapp/layout.dart';
-import 'package:voltrac/codingapp/theme.dart';
+import 'package:AmigaCrop/codingapp/drawer.dart';
+import 'package:AmigaCrop/codingapp/layout.dart';
+import 'package:AmigaCrop/codingapp/theme.dart';
 import 'package:provider/provider.dart';
-import 'package:voltrac/codingapp/theme-storage.dart';
+import 'package:AmigaCrop/codingapp/theme-storage.dart';
 import 'package:feature_discovery/feature_discovery.dart';
 
 class Mainpage extends StatefulWidget {

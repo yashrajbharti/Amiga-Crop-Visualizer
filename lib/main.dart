@@ -2,9 +2,9 @@
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_translate/flutter_translate.dart';
-import 'package:voltrac/codingapp/splash.dart';
+import 'package:AmigaCrop/codingapp/splash.dart';
 import 'package:provider/provider.dart';
-import 'package:voltrac/codingapp/theme-storage.dart';
+import 'package:AmigaCrop/codingapp/theme-storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 main() async {
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           child: Consumer<ThemeModel>(
               builder: (context, ThemeModel themeNotifier, child) {
             return MaterialApp(
-              title: "VolTrac",
+              title: "AmigaCrop",
               theme:
                   themeNotifier.isDark ? ThemeData.dark() : ThemeData.light(),
               localizationsDelegates: [

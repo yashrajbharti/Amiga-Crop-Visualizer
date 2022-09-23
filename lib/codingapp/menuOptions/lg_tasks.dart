@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_translate/flutter_translate.dart';
-import 'package:voltrac/codingapp/drawer.dart';
-import 'package:voltrac/codingapp/kml/kml.dart';
-import 'package:voltrac/codingapp/kml/kmlgenerator.dart';
+import 'package:AmigaCrop/codingapp/drawer.dart';
+import 'package:AmigaCrop/codingapp/kml/kml.dart';
+import 'package:AmigaCrop/codingapp/kml/kmlgenerator.dart';
 import 'package:path_provider/path_provider.dart';
 import 'dart:io';
 import 'dart:ui' as ui;
@@ -11,7 +11,7 @@ import 'package:ssh2/ssh2.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:provider/provider.dart';
-import 'package:voltrac/codingapp/theme-storage.dart';
+import 'package:AmigaCrop/codingapp/theme-storage.dart';
 
 class LGtasks extends StatefulWidget {
   LGtasks({Key? key}) : super(key: key);
