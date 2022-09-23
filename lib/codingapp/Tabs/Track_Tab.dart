@@ -29,8 +29,8 @@ List<String> kmltext = ['', '', '', '', '', '', '', ''];
 String localpath = "";
 bool isOpen = false;
 bool loading = false;
-double latvalue = 28.65665656297236;
-double longvalue = -17.885454520583153;
+double latvalue = 39.29793673357732;
+double longvalue = -3.144586280853279;
 List<String> projectname = [
   "Crop_Field",
   "Insect",

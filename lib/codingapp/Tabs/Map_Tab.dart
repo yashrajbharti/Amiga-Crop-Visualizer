@@ -24,7 +24,7 @@ class MyMap extends StatefulWidget {
 }
 
 class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
-  static LatLng _center = const LatLng(28.65665656297236, -17.885454520583153);
+  static LatLng _center = const LatLng(39.29793673357732, -3.144586280853279);
   // late AnimationController _rotationiconcontroller;
   final Set<Marker> _markers = {};
   GoogleMapController? mapController;
@@ -33,8 +33,8 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
   // bool isDemoActive = false;
   int rigcount = 5;
   double zoomvalue = 591657550.500000 / pow(2, 13.15393352508545);
-  double latvalue = 28.65665656297236;
-  double longvalue = -17.885454520583153;
+  double latvalue = 39.29793673357732;
+  double longvalue = -3.144586280853279;
   double tiltvalue = 41.82725143432617;
   double bearingvalue = 61.403038024902344; // 2D angle
 
@@ -261,8 +261,8 @@ class _MyMapState extends State<MyMap> with SingleTickerProviderStateMixin {
     );
 
     LookAt flyto = LookAt(
-      -17.885454520583153,
-      28.65665656297236,
+      -3.144586280853279,
+      39.29793673357732,
       "${zoomvalue / rigcount}",
       "41.82725143432617",
       "61.403038024902344",

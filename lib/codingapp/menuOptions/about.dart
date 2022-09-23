@@ -54,9 +54,10 @@ class _AboutScreenState extends State<AboutScreen> {
               body: SingleChildScrollView(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
-                      horizontal: 120.0, vertical: 0),
+                      horizontal: 360.0, vertical: 0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(
