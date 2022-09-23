@@ -17,7 +17,7 @@
 
 * This app takes Data from the Amiga Drone and shows it in colored KML onto the Liquid Galaxy. For demonstration purposes, we show a hardcoded data that replicates the data report from the Amiga Tracter.
 * Amiga Tracter drone gives a report of the crops and their quality. This helps us to distinguish between good and bad crops that can be shown onto the LG Rig once their health status and location are known.
-* Further idea is to add a functionality of identifying good and bad insects on the crops with the help of the Amiga tracter and show visualization of the same.
+* Further idea is to add a functionality of identifying good and bad insects on the crops with the help of the Amiga tracter and show visualization of the same. Then the use case is to spray pesticide on the locations where the bad insects are found, to protect the good and helpful insects. Also we need not spray any pesticide if the ratio of Good to Bad insects is above 2:1.
 * Another implementation is to have a use case where user can know which crops to grow next depending on the enriched and depleted nutrients of the soil. For this, the amiga tracter must be able to learn about the different types of soil.
 * The Amiga Crop Visualizer app currently makes visualization of 3 Tracks: Crop Field Map, Insect Track Map and Fields Track Map.
   
