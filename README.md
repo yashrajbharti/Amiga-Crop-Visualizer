@@ -21,6 +21,7 @@
 * Another implementation is to have a use case where user can know which crops to grow next depending on the enriched and depleted nutrients of the soil. For this, the amiga tracter must be able to learn about the different types of soil.
 * The Amiga Crop Visualizer app currently makes visualization of 3 Tracks: Crop Field Map, Insect Track Map and Fields Track Map.
   
+![](https://raw.githubusercontent.com/yashrajbharti/kml-images/main/Crops-map.png)  
   
 ## Contributing 
 
