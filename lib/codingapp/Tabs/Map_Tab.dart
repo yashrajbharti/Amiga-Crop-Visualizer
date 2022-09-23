@@ -618,7 +618,7 @@ class LGConnection {
 // 			</ListStyle>
 // 		</Style>
 //     <GroundOverlay>
-// 			<name>la palma map</name>
+// 			<name>Amiga map</name>
 // 			<Icon>
 // 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/lapalmamap.png</href>
 // 				<viewBoundScale>0.75</viewBoundScale>
@@ -632,7 +632,7 @@ class LGConnection {
 // 			</LatLonBox>
 // 		</GroundOverlay>
 // 		<GroundOverlay>
-// 			<name>la palma text</name>
+// 			<name>Amiga text</name>
 // 			<Icon>
 // 				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/lapalma.png</href>
 // 				<viewBoundScale>0.75</viewBoundScale>

@@ -14,6 +14,7 @@ class AboutScreen extends StatefulWidget {
 }
 
 class _AboutScreenState extends State<AboutScreen> {
+  // ignore: unused_element
   _launchURL(Uri url) async {
     if (await canLaunchUrl(url)) {
       await launchUrl(url);
@@ -76,259 +77,13 @@ class _AboutScreenState extends State<AboutScreen> {
                               icon: Image.asset('assets/leaf.png'),
                               iconSize: 410,
                               onPressed: null)),
-                      Linkify(
-                        onOpen: _onOpen,
-                        text: translate("About.author"),
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 24,
-                            color: themeNotifier.isDark
-                                ? Colors.white
-                                : Colors.black),
-                        linkStyle: TextStyle(
-                          color: themeNotifier.isDark
-                              ? Colors.white
-                              : Colors.black,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 24,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            GestureDetector(
-                                onTap: () {
-                                  _launchURL(Uri.parse(
-                                      'https://www.linkedin.com/in/yash-raj-bharti-5693b6183/'));
-                                },
-                                child: Text(
-                                  "LinkedIn",
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 24,
-                                      color: Color.fromARGB(255, 97, 146, 245)),
-                                )),
-                            GestureDetector(
-                                onTap: () {
-                                  _launchURL(Uri.parse(
-                                      'https://twitter.com/YashRaj49744398'));
-                                },
-                                child: Text(
-                                  ", Twitter",
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 24,
-                                      color: Color.fromARGB(255, 97, 146, 245)),
-                                )),
-                            GestureDetector(
-                                onTap: () {
-                                  _launchURL(Uri.parse(
-                                      'https://github.com/yashrajbharti'));
-                                },
-                                child: Text(
-                                  ", Github",
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 24,
-                                      color: Color.fromARGB(255, 97, 146, 245)),
-                                )),
-                            GestureDetector(
-                                onTap: () {
-                                  _launchURL(Uri.parse(
-                                      'https://yashrajbharti.github.io/portfolio/'));
-                                },
-                                child: Text(
-                                  ", Portfolio",
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 24,
-                                      color: Color.fromARGB(255, 97, 146, 245)),
-                                )),
-                          ]),
-                      Text(
-                        translate("About.lab"),
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 24,
-                            color: themeNotifier.isDark
-                                ? Colors.white
-                                : Colors.black),
-                        textAlign: TextAlign.start,
-                      ),
                       Transform.scale(
                           scale: 1.6,
                           child: Builder(
                               builder: (context) => IconButton(
-                                  icon: Image.asset('assets/icons/logos.png'),
+                                  icon: Image.asset('assets/amiga.png'),
                                   iconSize: 580,
                                   onPressed: null))),
-                      Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text(
-                              translate("About.all"),
-                              style: TextStyle(
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,
-                              ),
-                              textAlign: TextAlign.start,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(vertical: 10.0),
-                        child: Linkify(
-                          onOpen: _onOpen,
-                          text: translate("About.points"),
-                          style: TextStyle(
-                            color: themeNotifier.isDark
-                                ? Colors.white
-                                : Colors.black,
-                            fontSize: 18,
-                          ),
-                          linkStyle: TextStyle(
-                              color: themeNotifier.isDark
-                                  ? Colors.white
-                                  : Colors.black,
-                              fontSize: 18),
-                          textAlign: TextAlign.start,
-                        ),
-                      ),
-                      Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Container(
-                              width: MediaQuery.of(context).size.width * 0.40,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    translate("About.learn"),
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 24),
-                                  ),
-                                  Padding(
-                                    padding:
-                                        EdgeInsets.symmetric(vertical: 15.0),
-                                    child: Text(
-                                      translate("About.check"),
-                                      style: TextStyle(fontSize: 18),
-                                      textAlign: TextAlign.start,
-                                    ),
-                                  ),
-                                  GestureDetector(
-                                    onTap: () {
-                                      _launchURL(Uri.parse(
-                                          'https://github.com/yashrajbharti/La-Palma-Volcano-Eruption-Tracking-Tool'));
-                                    },
-                                    child: Text(
-                                      translate("About.github"),
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                          fontSize: 20,
-                                          color: Color.fromARGB(
-                                              255, 97, 146, 245)),
-                                    ),
-                                  ),
-                                  Text(
-                                    '\n',
-                                    style: TextStyle(fontSize: 4),
-                                    textAlign: TextAlign.start,
-                                  ),
-                                  GestureDetector(
-                                    onTap: () {
-                                      _launchURL(Uri.parse(
-                                          'https://github.com/Alexevers/Alejandro-Android-Application-Refurbishment/blob/GSOC-2022-Apps/La%20Palma%20Volcano%20Tracking%20Tool/PrivacyPolicy.md'));
-                                    },
-                                    child: Text(
-                                      translate("About.privacy"),
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                          fontSize: 20,
-                                          color: Color.fromARGB(
-                                              255, 97, 146, 245)),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              height: 160,
-                              child: VerticalDivider(
-                                color: Color.fromARGB(120, 74, 74, 74),
-                                thickness: 1,
-                              ),
-                            ),
-                            Container(
-                              width: MediaQuery.of(context).size.width * 0.40,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    translate("About.attribute"),
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 24),
-                                  ),
-                                  Padding(
-                                    padding:
-                                        EdgeInsets.symmetric(vertical: 15.0),
-                                    child: Text(
-                                      translate("About.resource"),
-                                      style: TextStyle(fontSize: 18),
-                                      textAlign: TextAlign.start,
-                                    ),
-                                  ),
-                                  GestureDetector(
-                                    onTap: () {
-                                      _launchURL(Uri.parse(
-                                          'https://www.flaticon.com'));
-                                    },
-                                    child: Text(
-                                      translate("Flaticon | Freepik"),
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                          fontSize: 20,
-                                          color: Color.fromARGB(
-                                              255, 97, 146, 245)),
-                                    ),
-                                  ),
-                                  Text(
-                                    '\n',
-                                    style: TextStyle(fontSize: 4),
-                                    textAlign: TextAlign.start,
-                                  ),
-                                  GestureDetector(
-                                    onTap: () {
-                                      _launchURL(Uri.parse(
-                                          'https://iconarchive.com/show/noto-emoji-travel-places-icons-by-google/42463-volcano-icon.html'));
-                                    },
-                                    child: Text(
-                                      translate("Icon Archive"),
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                          fontSize: 20,
-                                          color: Color.fromARGB(
-                                              255, 97, 146, 245)),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
                       SizedBox(
                         height: 40,
                       ),
@@ -339,6 +94,7 @@ class _AboutScreenState extends State<AboutScreen> {
             ));
   }
 
+  // ignore: unused_element
   Future<void> _onOpen(LinkableElement link) async {
     if (await canLaunchUrl(Uri.parse(link.url))) {
       await launchUrl(Uri.parse(link.url));

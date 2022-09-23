@@ -205,11 +205,11 @@ class _SendtoLGState extends State<SendtoLG> {
               margin: const EdgeInsets.fromLTRB(90, 30, 90, 0),
               child: Column(
                 children: [
-                  Row(
+                  Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         SizedBox(
-                          width: 500,
+                          width: 600,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               elevation: 2,
@@ -247,7 +247,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                 SizedBox(
                                   width: 10,
                                 ),
-                                Text(translate('Track.hist').trim(),
+                                Text(translate('Track.hist'),
                                     style: TextStyle(fontSize: 40)),
                                 Transform.scale(
                                     scale: 1.5,
@@ -262,8 +262,9 @@ class _SendtoLGState extends State<SendtoLG> {
                             ),
                           ),
                         ),
+                        SizedBox(height: 46),
                         SizedBox(
-                          width: 500,
+                          width: 600,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               elevation: 2,
@@ -301,7 +302,7 @@ class _SendtoLGState extends State<SendtoLG> {
                                 SizedBox(
                                   width: 10,
                                 ),
-                                Text(translate('Track.lava').trim(),
+                                Text(translate('Track.lava'),
                                     style: TextStyle(fontSize: 40)),
                                 Transform.scale(
                                     scale: 1.5,
@@ -317,12 +318,12 @@ class _SendtoLGState extends State<SendtoLG> {
                           ),
                         )
                       ]),
-                  SizedBox(height: 16),
+                  SizedBox(height: 46),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       SizedBox(
-                        width: 500,
+                        width: 600,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                               elevation: 2,
@@ -359,7 +360,7 @@ class _SendtoLGState extends State<SendtoLG> {
                               SizedBox(
                                 width: 10,
                               ),
-                              Text(translate('Track.prehistoric').trim(),
+                              Text(translate('Track.prehistoric'),
                                   style: TextStyle(fontSize: 40)),
                               Transform.scale(
                                   scale: 1.5,
@@ -374,286 +375,9 @@ class _SendtoLGState extends State<SendtoLG> {
                           ),
                         ),
                       ),
-                      SizedBox(
-                        width: 500,
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                              elevation: 2,
-                              shadowColor: themeNotifier.isDark
-                                  ? Colors.black
-                                  : Colors.grey.withOpacity(0.3),
-                              primary: themeNotifier.isDark
-                                  ? ui.Color.fromARGB(255, 43, 43, 43)
-                                  : ui.Color.fromARGB(255, 220, 220, 220),
-                              padding: EdgeInsets.all(15)),
-                          onPressed: () async {
-                            savekml_Task(projectname[3]);
-                            await _read(3);
-                            await LGConnection().openBalloon(
-                                projectname[3],
-                                translate('Track.aff').trim(),
-                                translate("info.aff.date"),
-                                240,
-                                translate("info.description") +
-                                    " " +
-                                    translate("info.aff.description"),
-                                "COPERNICUS",
-                                translate('title.name'),
-                                "affectedareas_infographic.jpg");
-                            setState(() {
-                              _duration = 56040;
-                            });
-                            jumpToPage(3);
-                            _showToast(
-                                translate('Track.ready'), themeNotifier.isDark);
-                          },
-                          child: Wrap(
-                            children: <Widget>[
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text(translate('Track.aff').trim(),
-                                  style: TextStyle(fontSize: 40)),
-                              Transform.scale(
-                                  scale: 1.5,
-                                  child: Builder(
-                                    builder: (context) => IconButton(
-                                      icon: Image.asset(
-                                          'assets/icons/affectedareas.png'),
-                                      onPressed: null,
-                                    ),
-                                  )),
-                            ],
-                          ),
-                        ),
-                      )
                     ],
                   ),
-                  SizedBox(height: 16),
-                  Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        SizedBox(
-                          width: 500,
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              elevation: 2,
-                              shadowColor: themeNotifier.isDark
-                                  ? Colors.black
-                                  : Colors.grey.withOpacity(0.3),
-                              primary: themeNotifier.isDark
-                                  ? ui.Color.fromARGB(255, 43, 43, 43)
-                                  : ui.Color.fromARGB(255, 220, 220, 220),
-                              padding: EdgeInsets.all(15),
-                            ),
-                            onPressed: () async {
-                              savekml_Task(projectname[4]);
-                              await _read(4);
-                              await LGConnection().openBalloon(
-                                  projectname[4],
-                                  translate('Track.land').trim(),
-                                  translate("info.land.date"),
-                                  240,
-                                  translate("info.description") +
-                                      " " +
-                                      translate("info.land.description"),
-                                  "NASA Earth Observatory , Sentinel Playground, COPERNICUS",
-                                  translate('title.name'),
-                                  "landscape_infographic.jpg");
-                              setState(() {
-                                _duration = 4000;
-                              });
-                              jumpToPage(4);
-                              _showToast(translate('Track.ready'),
-                                  themeNotifier.isDark);
-                            },
-                            child: Wrap(
-                              children: <Widget>[
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                Text(translate('Track.land').trim(),
-                                    style: TextStyle(fontSize: 40)),
-                                Transform.scale(
-                                    scale: 1.9,
-                                    child: Builder(
-                                      builder: (context) => IconButton(
-                                        icon: Image.asset(
-                                            'assets/icons/landscape.png'),
-                                        onPressed: null,
-                                      ),
-                                    )),
-                              ],
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 500,
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              elevation: 2,
-                              shadowColor: themeNotifier.isDark
-                                  ? Colors.black
-                                  : Colors.grey.withOpacity(0.3),
-                              primary: themeNotifier.isDark
-                                  ? ui.Color.fromARGB(255, 43, 43, 43)
-                                  : ui.Color.fromARGB(255, 220, 220, 220),
-                              padding: EdgeInsets.all(15),
-                            ),
-                            onPressed: () async {
-                              savekml_Task(projectname[5]);
-                              await _read(5);
-                              await LGConnection().openBalloon(
-                                  projectname[5],
-                                  translate('Track.So2').trim(),
-                                  translate("info.So2.date"),
-                                  240,
-                                  translate("info.description") +
-                                      " " +
-                                      translate("info.So2.description"),
-                                  "Sentinel EO Browser, GDACS, Twitter | Platform ADAM",
-                                  translate('title.name'),
-                                  "so2_infographic.gif");
-                              setState(() {
-                                _duration = 3710;
-                              });
-                              jumpToPage(5);
-                              _showToast(translate('Track.ready'),
-                                  themeNotifier.isDark);
-                            },
-                            child: Wrap(
-                              children: <Widget>[
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                Text(translate('Track.So2').trim(),
-                                    style: TextStyle(fontSize: 40)),
-                                Transform.scale(
-                                    scale: 1.5,
-                                    child: Builder(
-                                      builder: (context) => IconButton(
-                                        icon: Image.asset(
-                                            'assets/icons/so2emissions.png'),
-                                        onPressed: null,
-                                      ),
-                                    )),
-                              ],
-                            ),
-                          ),
-                        )
-                      ]),
-                  SizedBox(height: 16),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      SizedBox(
-                        width: 500,
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                              elevation: 2,
-                              shadowColor: themeNotifier.isDark
-                                  ? Colors.black
-                                  : Colors.grey.withOpacity(0.3),
-                              primary: themeNotifier.isDark
-                                  ? ui.Color.fromARGB(255, 43, 43, 43)
-                                  : ui.Color.fromARGB(255, 220, 220, 220),
-                              padding: EdgeInsets.all(15)),
-                          onPressed: () async {
-                            savekml_Task(projectname[6]);
-                            await _read(6);
-                            await LGConnection().openBalloon(
-                                projectname[6],
-                                translate('Track.situation').trim(),
-                                translate("info.situation.date"),
-                                270,
-                                translate("info.description") +
-                                    " " +
-                                    translate("info.situation.description"),
-                                "Instituto Geográfico Nacional, GDACS, ERCC Portal",
-                                translate('title.name'),
-                                "situation_infographic.png");
-                            setState(() {
-                              _duration = 5250;
-                            });
-                            jumpToPage(6);
-                            _showToast(
-                                translate('Track.ready'), themeNotifier.isDark);
-                          },
-                          child: Wrap(
-                            children: <Widget>[
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text(translate('Track.situation').trim(),
-                                  style: TextStyle(fontSize: 40)),
-                              Transform.scale(
-                                  scale: 1.5,
-                                  child: Builder(
-                                    builder: (context) => IconButton(
-                                      icon: Image.asset(
-                                          'assets/icons/situation.png'),
-                                      onPressed: null,
-                                    ),
-                                  )),
-                            ],
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 500,
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                              elevation: 2,
-                              shadowColor: themeNotifier.isDark
-                                  ? Colors.black
-                                  : Colors.grey.withOpacity(0.3),
-                              primary: themeNotifier.isDark
-                                  ? ui.Color.fromARGB(255, 43, 43, 43)
-                                  : ui.Color.fromARGB(255, 220, 220, 220),
-                              padding: EdgeInsets.all(15)),
-                          onPressed: () async {
-                            savekml_Task(projectname[7]);
-                            await _read(7);
-                            await LGConnection().openBalloon(
-                                projectname[7],
-                                translate('Track.located').trim(),
-                                translate("info.located.date"),
-                                230,
-                                translate("info.description") +
-                                    " " +
-                                    translate("info.located.description"),
-                                "Instituto Geográfico Nacional",
-                                translate('title.name'),
-                                "locatedevents_infographic.jpg");
-                            setState(() {
-                              _duration = 8710;
-                            });
-                            jumpToPage(7);
-                            _showToast(
-                                translate('Track.ready'), themeNotifier.isDark);
-                          },
-                          child: Wrap(
-                            children: <Widget>[
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text(translate('Track.located').trim(),
-                                  style: TextStyle(fontSize: 40)),
-                              Transform.scale(
-                                  scale: 1.5,
-                                  child: Builder(
-                                    builder: (context) => IconButton(
-                                      icon: Image.asset(
-                                          'assets/icons/locatedevents.png'),
-                                      onPressed: null,
-                                    ),
-                                  )),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  SizedBox(height: 46),
                   SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -711,7 +435,8 @@ class _SendtoLGState extends State<SendtoLG> {
                                         style: TextStyle(fontSize: 35)),
                                     Icon(
                                       Icons.location_on_sharp,
-                                      color: ui.Color.fromARGB(255, 228, 6, 9),
+                                      color:
+                                          ui.Color.fromARGB(255, 86, 177, 71),
                                       size: 45.0,
                                     ),
                                   ],
@@ -793,7 +518,7 @@ class LGConnection {
 	<Style id="purple_paddle">
 		<IconStyle>
 			<Icon>
-				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/molten.png</href>
+				<href>https://raw.githubusercontent.com/yashrajbharti/kml-images/main/leaf.png</href>
 			</Icon>
 		</IconStyle>
 		<BalloonStyle>
@@ -950,56 +675,30 @@ http://maps.google.com/mapfiles/kml/paddle/purple-blank.png
     LookAt flyto = LookAt(
       projectname == "Crop_Field"
           ? -17.885454
-          : projectname == "Located_Events"
-              ? -17.834886
-              : projectname == "SO2_Emission"
-                  ? -7.561565
-                  : projectname == "Fields"
-                      ? -17.885454
-                      : projectname == "Insect"
-                          ? -17.892286
-                          : -17.895486,
+          : projectname == "Fields"
+              ? -17.885454
+              : projectname == "Insect"
+                  ? -17.892286
+                  : -17.895486,
       projectname == "Crop_Field"
           ? 28.556656
-          : projectname == "Located_Events"
-              ? 28.564986
-              : projectname == "SO2_Emission"
-                  ? 33.561245
-                  : projectname == "Fields"
-                      ? 28.556656
-                      : projectname == "Insect"
-                          ? 28.616354
-                          : projectname == "Affected_Areas"
-                              ? 28.616354
-                              : projectname == "Situation"
-                                  ? 28.597354
-                                  : projectname == "Landscape"
-                                      ? 28.616354
-                                      : 28.610478,
-      projectname == "Located_Events"
-          ? '${61708.9978371 / int.parse(credencials['numberofrigs'])}'
-          : projectname == "Insect"
-              ? '${18208.9978371 / int.parse(credencials['numberofrigs'])}'
-              : projectname == "Landscape"
-                  ? '${65208.997837 / int.parse(credencials['numberofrigs'])}'
-                  : projectname == "Affected_Areas"
-                      ? '${18208.9978371 / int.parse(credencials['numberofrigs'])}'
-                      : projectname == "Situation"
-                          ? '${75208.9978371 / int.parse(credencials['numberofrigs'])}'
-                          : projectname == "Crop_Field"
-                              ? '${151708.997837 / int.parse(credencials['numberofrigs'])}'
-                              : projectname == "SO2_Emission"
-                                  ? '${10500001.9978 / int.parse(credencials['numberofrigs'])}'
-                                  : projectname == "Fields"
-                                      ? '${151708.997837 / int.parse(credencials['numberofrigs'])}'
-                                      : '${91708.9978371 / int.parse(credencials['numberofrigs'])}',
+          : projectname == "Fields"
+              ? 28.556656
+              : projectname == "Insect"
+                  ? 28.616354
+                  : 28.610478,
+      projectname == "Insect"
+          ? '${18208.9978371 / int.parse(credencials['numberofrigs'])}'
+          : projectname == "Crop_Field"
+              ? '${151708.997837 / int.parse(credencials['numberofrigs'])}'
+              : projectname == "Fields"
+                  ? '${151708.997837 / int.parse(credencials['numberofrigs'])}'
+                  : '${91708.9978371 / int.parse(credencials['numberofrigs'])}',
       projectname == "Crop_Field"
           ? '41.82725143432617'
-          : projectname == "SO2_Emission"
-              ? '25'
-              : projectname == "Fields"
-                  ? '41.82725143432617'
-                  : '45',
+          : projectname == "Fields"
+              ? '41.82725143432617'
+              : '45',
       projectname == "Crop_Field"
           ? ' 61.403038024902344'
           : projectname == "Fields"

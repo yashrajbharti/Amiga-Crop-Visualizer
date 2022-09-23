@@ -34,13 +34,13 @@
     
 ## About AmigaCrop
 
-* The La Palma Volcano Eruption Tracking Tool is being started as a **Google Summer of Code 2022 project with the Liquid Galaxy Organization**. Details can be viewed [here](https://summerofcode.withgoogle.com/programs/2022/projects/YsfWtGqw).
-* La Palma AmigaCrop is an app built on the Flutter framework that allows the Visualization of various Tracks, such as Historic, Lava Flow, Affected Areas, Pre-historic, Landscape, Sulphur Dioxide Emissions, Situation, and Located Events map, for La Palmas onto the Liquid Galaxy. 
-The project presents multiple layers of information on the events that occurred in the eruption of the Cumbre Vieja volcano in La Palma during the fall of 2021. 
+* The Amiga Crop Visualizer is being started as a **Google Summer of Code 2022 project with the Liquid Galaxy Organization**. Details can be viewed [here](https://summerofcode.withgoogle.com/programs/2022/projects/YsfWtGqw).
+* Amiga AmigaCrop is an app built on the Flutter framework that allows the Visualization of various Tracks, such as Historic, Lava Flow, Affected Areas, Pre-historic, Landscape, Sulphur Dioxide Emissions, Situation, and Located Events map, for Amigas onto the Liquid Galaxy. 
+The project presents multiple layers of information on the events that occurred in the eruption of the Cumbre Vieja volcano in Amiga during the fall of 2021. 
 * Data such as the evolution of lava flows and many more are presented in a graphical and interactive way on the Liquid Galaxy platform, a visualization cluster based on Google Earth.
 * Further customizations are possible with the help of the Custom Builder, which has an interactive UX where the user can check the data he wants and visualize the Custom KML by providing start and end dates with the help of a calendar widget. 
 * The Map screen UI is a perfect interaction tool for the panoramic display of Google Earth with the help of Google Maps, and it allows us to control the LG and send Orbit movements and various other controls. 
-The app shows essential information about the La Palma Volcanic activity in an elegant and user-friendly way.
+The app shows essential information about the Amiga Volcanic activity in an elegant and user-friendly way.
 * It supports 10 Languages: Arabic, German, English, Spanish, Hindi, Japanese, Portuguese, Russian, Albanian, and Chinese (Simplified). 
 The app comes in both day and night modes, and one can "tour" the app to get familiar with all the features.
 Lastly, the app has an info tab that lists helpful information along with the sources so that one can use this app for research and education purposes.
@@ -48,7 +48,7 @@ Lastly, the app has an info tab that lists helpful information along with the so
   
 ## App Features
   
-* Allows Visualization of various Tracks such as Historic, Lava Flow, Affected Areas, etc for La Palmas onto the Liquid Galaxy. One can also visualize Custom KML by providing start and end dates with the help of calender widget. The Map screen UI allows us to Control the LG and send Orbit movements and various other controls. The app shows a significant amount of information about the La Palma Volcanic activity in an elegant and user-friendly way.     
+* Allows Visualization of various Tracks such as Historic, Lava Flow, Affected Areas, etc for Amigas onto the Liquid Galaxy. One can also visualize Custom KML by providing start and end dates with the help of calender widget. The Map screen UI allows us to Control the LG and send Orbit movements and various other controls. The app shows a significant amount of information about the Amiga Volcanic activity in an elegant and user-friendly way.     
 * Supports 10 Languages: 🇦🇪 Arabic, 🇩🇪 German, 🇺🇸 English, 🇪🇸 Spanish, 🇮🇳 Hindi, 🇯🇵 Japanese, 🇵🇹 Portuguese, 🇷🇺 Russian, 🇦🇱 Albanian, and 🇨🇳 Chinese (Simplified).  
 * Comes with Day and Night theme switch.  
 * One can seemlessly control the Google Earth of the Liquid Galaxy by performing touch interactions on the Google Maps of the AmigaCrop app.
@@ -89,7 +89,7 @@ $ git clone https://github.com/yashrajbharti/La-Palma-Volcano-Eruption-Tracking-
 $ cd La-Palma-Volcano-Eruption-Tracking-Tool
 ```
   
-* After you have successfully cloned the project, set up Google Maps API Key as La Palma AmigaCrop uses [Google Maps Android API](https://developers.google.com/maps/documentation/android-sdk/overview?hl=pt-br) as the map service. To use Google Maps you required an **API KEY**. To get this key you need to:
+* After you have successfully cloned the project, set up Google Maps API Key as Amiga AmigaCrop uses [Google Maps Android API](https://developers.google.com/maps/documentation/android-sdk/overview?hl=pt-br) as the map service. To use Google Maps you required an **API KEY**. To get this key you need to:
 
 1. Have a Google Account
 2. Create a Google Cloud Project
@@ -184,7 +184,7 @@ Fill up issues, bugs or feature requests in our issue tracker. Please be very de
     
 ### License
 
-The La Palma Volcano Eruption Tracking Tool is licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Amiga Crop Visualizer is licensed under the [MIT license](https://opensource.org/licenses/MIT).
           
 ### Privacy Policy
   

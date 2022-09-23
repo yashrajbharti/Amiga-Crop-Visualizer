@@ -41,6 +41,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
   double latvalue = 28.55665656297236;
   double longvalue = -17.885454520583153;
 
+  // ignore: unused_element
   _launchURL(String url) async {
     if (await canLaunchUrl(Uri.parse(url))) {
       await launchUrl(Uri.parse(url));
@@ -248,6 +249,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                               ),
                             ],
                           )),
+                      SizedBox(
+                        height: 90,
+                      ),
                       new Expanded(
                           flex: 9,
                           child: new Column(
@@ -255,7 +259,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               new Text(
-                                translate("info.hist.description"),
+                                translate(""),
                                 style: new TextStyle(
                                     fontSize: 18.5, color: Colors.white70),
                               ),
@@ -307,7 +311,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               new Text(
-                                translate("info.hist.date"),
+                                translate(""),
                                 style: new TextStyle(
                                   fontSize: 18.5,
                                   color: Colors.white70,
@@ -315,6 +319,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                               ),
                             ],
                           )),
+                      SizedBox(
+                        height: 90,
+                      ),
                       new Padding(
                           padding: new EdgeInsets.only(
                         right: 70.0,
@@ -354,165 +361,22 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                               ),
                             ],
                           )),
+                      SizedBox(
+                        height: 90,
+                      ),
                       new Expanded(
                         flex: 9,
                         child: new Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text(translate("info.hist.legend"),
+                            Text(translate(""),
                                 style: TextStyle(
                                     fontSize: 18.5,
                                     color: Colors.white70,
                                     fontFamily: "GoogleSans")),
                             SizedBox(
                               height: 8,
-                            ),
-                            new Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon8.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text("1480    ",
-                                    style: TextStyle(
-                                        fontSize: 18.5,
-                                        color: Colors.white70,
-                                        fontFamily: "GoogleSans")),
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon7.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text(
-                                  "1585   ",
-                                  style: TextStyle(
-                                      fontSize: 18.5,
-                                      color: Colors.white70,
-                                      fontFamily: "GoogleSans"),
-                                ),
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon2.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text(
-                                  "1646   ",
-                                  style: TextStyle(
-                                      fontSize: 18.5,
-                                      color: Colors.white70,
-                                      fontFamily: "GoogleSans"),
-                                ),
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon1.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text(
-                                  translate("info.hist.and"),
-                                  style: TextStyle(
-                                      fontSize: 18.5,
-                                      color: Colors.white70,
-                                      fontFamily: "GoogleSans"),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            new Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon6.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text("1712    ",
-                                    style: TextStyle(
-                                        fontSize: 18.5,
-                                        color: Colors.white70,
-                                        fontFamily: "GoogleSans")),
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon4.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text(
-                                  "1949   ",
-                                  style: TextStyle(
-                                      fontSize: 18.5,
-                                      color: Colors.white70,
-                                      fontFamily: "GoogleSans"),
-                                ),
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon3.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text(
-                                  "1949   ",
-                                  style: TextStyle(
-                                      fontSize: 18.5,
-                                      color: Colors.white70,
-                                      fontFamily: "GoogleSans"),
-                                ),
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon5.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text(
-                                  "2021   ",
-                                  style: TextStyle(
-                                      fontSize: 18.5,
-                                      color: Colors.white70,
-                                      fontFamily: "GoogleSans"),
-                                ),
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon:
-                                        Image.asset('assets/icons/molten.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text(
-                                  translate("info.hist.lava"),
-                                  style: TextStyle(
-                                      fontSize: 18.5,
-                                      color: Colors.white70,
-                                      fontFamily: "GoogleSans"),
-                                ),
-                              ],
                             ),
                           ],
                         ),
@@ -553,70 +417,6 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                                     fontSize: 20.0,
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          )),
-                      new Expanded(
-                          flex: 9,
-                          child: new Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              GestureDetector(
-                                onTap: () {
-                                  _launchURL(
-                                      'https://emergency.copernicus.eu/mapping/list-of-components/EMSR546/ALL/EMSR546_AOI01');
-                                },
-                                child: const Text(
-                                  'COPERNICUS',
-                                  style: TextStyle(
-                                    decoration: TextDecoration.underline,
-                                    fontSize: 18.5,
-                                    color: Colors.white70,
-                                  ),
-                                ),
-                              ),
-                              Text(
-                                ' , ',
-                                style: TextStyle(
-                                  fontSize: 18.5,
-                                  color: Colors.white70,
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  _launchURL(
-                                      'https://www.researchgate.net/publication/284812060_The_magma_plumbing_system_for_the_1971_Teneguia_eruption_on_La_Palma_Canary_Islands/figures?lo=1');
-                                },
-                                child: const Text(
-                                  'ResearchGate',
-                                  style: TextStyle(
-                                    decoration: TextDecoration.underline,
-                                    fontSize: 18.5,
-                                    color: Colors.white70,
-                                  ),
-                                ),
-                              ),
-                              Text(
-                                ' , ',
-                                style: TextStyle(
-                                  fontSize: 18.5,
-                                  color: Colors.white70,
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  _launchURL(
-                                      'https://volcano.si.edu/volcano.cfm?vn=383010');
-                                },
-                                child: const Text(
-                                  'Global Volcanism Program',
-                                  style: TextStyle(
-                                    decoration: TextDecoration.underline,
-                                    fontSize: 18.5,
-                                    color: Colors.white70,
-                                  ),
-                                ),
                               ),
                             ],
                           )),
@@ -703,7 +503,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               new Text(
-                                translate("info.lava.description"),
+                                translate(""),
                                 style: new TextStyle(
                                     fontSize: 18.5, color: Colors.white70),
                               ),
@@ -748,6 +548,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                               ),
                             ],
                           )),
+                      SizedBox(
+                        height: 90,
+                      ),
                       new Expanded(
                           flex: 9,
                           child: new Column(
@@ -755,7 +558,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               new Text(
-                                translate("info.lava.date"),
+                                translate(""),
                                 style: new TextStyle(
                                   fontSize: 18.5,
                                   color: Colors.white70,
@@ -802,164 +605,22 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                               ),
                             ],
                           )),
+                      SizedBox(
+                        height: 90,
+                      ),
                       new Expanded(
                         flex: 9,
                         child: new Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text(translate("info.lava.legend"),
+                            Text(translate(""),
                                 style: TextStyle(
                                     fontSize: 18.5,
                                     color: Colors.white70,
                                     fontFamily: "GoogleSans")),
                             SizedBox(
                               height: 8,
-                            ),
-                            new Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon6.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text("24 Sep    ",
-                                    style: TextStyle(
-                                        fontSize: 18.5,
-                                        color: Colors.white70,
-                                        fontFamily: "GoogleSans")),
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon2.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text(
-                                  "8 Oct   ",
-                                  style: TextStyle(
-                                      fontSize: 18.5,
-                                      color: Colors.white70,
-                                      fontFamily: "GoogleSans"),
-                                ),
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon1.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text(
-                                  "21 Oct   ",
-                                  style: TextStyle(
-                                      fontSize: 18.5,
-                                      color: Colors.white70,
-                                      fontFamily: "GoogleSans"),
-                                ),
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon9.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text(
-                                  "4 Nov   ",
-                                  style: TextStyle(
-                                      fontSize: 18.5,
-                                      color: Colors.white70,
-                                      fontFamily: "GoogleSans"),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            new Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon10.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text("14 Nov    ",
-                                    style: TextStyle(
-                                        fontSize: 18.5,
-                                        color: Colors.white70,
-                                        fontFamily: "GoogleSans")),
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon7.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text(
-                                  "21 Nov   ",
-                                  style: TextStyle(
-                                      fontSize: 18.5,
-                                      color: Colors.white70,
-                                      fontFamily: "GoogleSans"),
-                                ),
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon11.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text(
-                                  "1 Dec   ",
-                                  style: TextStyle(
-                                      fontSize: 18.5,
-                                      color: Colors.white70,
-                                      fontFamily: "GoogleSans"),
-                                ),
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon12.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text(
-                                  "18 Dec   ",
-                                  style: TextStyle(
-                                      fontSize: 18.5,
-                                      color: Colors.white70,
-                                      fontFamily: "GoogleSans"),
-                                ),
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset('assets/icons/vent.png'),
-                                    iconSize: 36,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text(
-                                  translate("info.lava.vents"),
-                                  style: TextStyle(
-                                      fontSize: 18.5,
-                                      color: Colors.white70,
-                                      fontFamily: "GoogleSans"),
-                                ),
-                              ],
                             ),
                           ],
                         ),
@@ -1008,43 +669,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                           child: new Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              GestureDetector(
-                                onTap: () {
-                                  _launchURL(
-                                      'https://emergency.copernicus.eu/mapping/list-of-components/EMSR546/ALL/EMSR546_AOI01');
-                                },
-                                child: const Text(
-                                  'COPERNICUS',
-                                  style: TextStyle(
-                                    decoration: TextDecoration.underline,
-                                    fontSize: 18.5,
-                                    color: Colors.white70,
-                                  ),
-                                ),
-                              ),
-                              Text(
-                                ' , ',
-                                style: TextStyle(
-                                  fontSize: 18.5,
-                                  color: Colors.white70,
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  _launchURL(
-                                      'https://en.wikipedia.org/wiki/2021_Cumbre_Vieja_volcanic_eruption');
-                                },
-                                child: const Text(
-                                  'Wikipedia | Cumbre Vieja',
-                                  style: TextStyle(
-                                    decoration: TextDecoration.underline,
-                                    fontSize: 18.5,
-                                    color: Colors.white70,
-                                  ),
-                                ),
-                              )
-                            ],
+                            children: <Widget>[],
                           )),
                       new Padding(
                           padding: new EdgeInsets.only(
@@ -1128,7 +753,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               new Text(
-                                translate("info.prehistoric.description"),
+                                translate(""),
                                 style: new TextStyle(
                                     fontSize: 18.5, color: Colors.white70),
                               ),
@@ -1173,6 +798,9 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                               ),
                             ],
                           )),
+                      SizedBox(
+                        height: 90,
+                      ),
                       new Expanded(
                           flex: 9,
                           child: new Column(
@@ -1180,7 +808,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               new Text(
-                                translate("info.prehistoric.date"),
+                                translate(""),
                                 style: new TextStyle(
                                   fontSize: 18.5,
                                   color: Colors.white70,
@@ -1227,120 +855,22 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                               ),
                             ],
                           )),
+                      SizedBox(
+                        height: 90,
+                      ),
                       new Expanded(
                         flex: 9,
                         child: new Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text(translate("info.prehistoric.legend"),
+                            Text(translate(""),
                                 style: TextStyle(
                                     fontSize: 18.5,
                                     color: Colors.white70,
                                     fontFamily: "GoogleSans")),
                             SizedBox(
                               height: 8,
-                            ),
-                            new Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon9.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text("6 ± 2 Ka    ",
-                                    style: TextStyle(
-                                        fontSize: 18.5,
-                                        color: Colors.white70,
-                                        fontFamily: "GoogleSans")),
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon7.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text(
-                                  "3.2 ± 0.1 Ka   ",
-                                  style: TextStyle(
-                                      fontSize: 18.5,
-                                      color: Colors.white70,
-                                      fontFamily: "GoogleSans"),
-                                ),
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon11.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text(
-                                  "3.2 ± 0.1 Ka   ",
-                                  style: TextStyle(
-                                      fontSize: 18.5,
-                                      color: Colors.white70,
-                                      fontFamily: "GoogleSans"),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            new Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon4.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text("1.04 ± 0.009    ",
-                                    style: TextStyle(
-                                        fontSize: 18.5,
-                                        color: Colors.white70,
-                                        fontFamily: "GoogleSans")),
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon: Image.asset(
-                                        'assets/icons/Polygon6.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text(
-                                  "1480 AD   ",
-                                  style: TextStyle(
-                                      fontSize: 18.5,
-                                      color: Colors.white70,
-                                      fontFamily: "GoogleSans"),
-                                ),
-                                Builder(
-                                  builder: (context) => IconButton(
-                                    icon:
-                                        Image.asset('assets/icons/molten.png'),
-                                    iconSize: 20,
-                                    onPressed: () => {},
-                                  ),
-                                ),
-                                Text(
-                                  translate("info.prehistoric.lava"),
-                                  style: TextStyle(
-                                      fontSize: 18.5,
-                                      color: Colors.white70,
-                                      fontFamily: "GoogleSans"),
-                                ),
-                              ],
                             ),
                           ],
                         ),
@@ -1389,43 +919,7 @@ class _VerticalCardPagerDemoState extends State<VerticalCardPagerDemo>
                           child: new Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              GestureDetector(
-                                onTap: () {
-                                  _launchURL(
-                                      'https://www.researchgate.net/publication/284812060_The_magma_plumbing_system_for_the_1971_Teneguia_eruption_on_La_Palma_Canary_Islands/figures?lo=1');
-                                },
-                                child: const Text(
-                                  'ResearchGate',
-                                  style: TextStyle(
-                                    decoration: TextDecoration.underline,
-                                    fontSize: 18.5,
-                                    color: Colors.white70,
-                                  ),
-                                ),
-                              ),
-                              Text(
-                                ' , ',
-                                style: TextStyle(
-                                  fontSize: 18.5,
-                                  color: Colors.white70,
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  _launchURL(
-                                      'https://volcano.si.edu/volcano.cfm?vn=383010');
-                                },
-                                child: const Text(
-                                  'Global Volcanism Program',
-                                  style: TextStyle(
-                                    decoration: TextDecoration.underline,
-                                    fontSize: 18.5,
-                                    color: Colors.white70,
-                                  ),
-                                ),
-                              ),
-                            ],
+                            children: <Widget>[],
                           )),
                       new Padding(
                           padding: new EdgeInsets.only(
