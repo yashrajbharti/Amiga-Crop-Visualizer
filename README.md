@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="AmigaCrop" src="https://raw.githubusercontent.com/yashrajbharti/La-Palma-Volcano-Eruption-Tracking-Tool/main/assets/leaf.png" height="250px">
+  <img alt="AmigaCrop" src="https://raw.githubusercontent.com/yashrajbharti/kml-images/main/leaf.png" height="250px">
 </p>  
   
 <h1 align="center"> Amiga Crop</h1>
